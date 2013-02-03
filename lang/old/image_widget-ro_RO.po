@@ -1,0 +1,96 @@
+# This file is distributed under the same license as the the Image Widget package.
+# Rüdiger Weiß <ruediger@mac.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Image Widget 3.1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-30 14:15+0100\n"
+"PO-Revision-Date: 2012-03-27 14:22+0200\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: Romania\n"
+"Language-Team: Web Geeks\n"
+"Last-Translator: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+
+#: image-widget.php:33
+msgid "Showcase a single image with a Title, URL, and a Description"
+msgstr "Casetă de prezentare o singură imagine cu un titlu, URL-ul, precum şi o descriere"
+
+#: image-widget.php:35
+msgid "Image Widget"
+msgstr "Imagine Widget"
+
+#: image-widget.php:114
+msgid "Insert Into Widget"
+msgstr "Inserare în Widget"
+
+#: image-widget.php:265
+msgid "Title:"
+msgstr "Titlu:"
+
+#: image-widget.php:268
+msgid "Image:"
+msgstr "Imagine:"
+
+#: image-widget.php:272
+msgid "Change Image"
+msgstr "Modificare imagine"
+
+#: image-widget.php:272
+msgid "Add Image"
+msgstr "Adăugaţi imagini"
+
+#: image-widget.php:295
+msgid "Caption:"
+msgstr "Legendă:"
+
+#: image-widget.php:298
+msgid "Link:"
+msgstr "Link-ul:"
+
+#: image-widget.php:301
+msgid "Stay in Window"
+msgstr "Staţi în fereastra"
+
+#: image-widget.php:302
+msgid "Open New Window"
+msgstr "Deschideţi fereastra noua"
+
+#: image-widget.php:305
+msgid "Width:"
+msgstr "Lăţime:"
+
+#: image-widget.php:308
+msgid "Height:"
+msgstr "Înălţime:"
+
+#: image-widget.php:311
+msgid "Align:"
+msgstr "Align:"
+
+#: image-widget.php:313
+msgid "none"
+msgstr "nici unul"
+
+#: image-widget.php:314
+msgid "left"
+msgstr "stânga"
+
+#: image-widget.php:315
+msgid "center"
+msgstr "Centrul de"
+
+#: image-widget.php:316
+msgid "right"
+msgstr "dreptul de"
+
+#: image-widget.php:331
+msgid "Alternate Text:"
+msgstr "Text alternativ:"
+

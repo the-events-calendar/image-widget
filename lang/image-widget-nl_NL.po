@@ -1,0 +1,144 @@
+# Translation of the Image Widget 4.0 WordPress plugin.
+# This file is distributed under the same license as the the Image Widget package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Image Widget\n"
+"POT-Creation-Date: 2013-01-30 23:34-0800\n"
+"PO-Revision-Date: 2013-02-01 06:14-0800\n"
+"Last-Translator: Presis <contact@presis.nl>\n"
+"Language-Team: @ModernTribe <pro@tri.be>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: image-widget.php:40
+msgid "Showcase a single image with a Title, URL, and a Description"
+msgstr "Toon een enkele afbeelding met een Titel, URL, en een Omschrijving"
+
+#: image-widget.php:42
+msgid "Image Widget"
+msgstr "Afbeelding widget"
+
+#: image-widget.php:74 views/widget-admin.php:13
+msgid "Select an Image"
+msgstr "Selecteer een afbeelding"
+
+#: image-widget.php:75 lib/ImageWidgetDeprecated.php:66
+msgid "Insert Into Widget"
+msgstr "Invoegen in widget"
+
+#: image-widget.php:390
+#, php-format
+msgid ""
+"Thanks for upgrading the Image Widget! If you like this plugin, please "
+"consider <a href=\"%s\" target=\"_blank\">rating it</a> and maybe even check "
+"out our premium plugins including our <a href=\"%s\" target=\"_blank"
+"\">Events Calendar Pro</a>!"
+msgstr ""
+"Bedankt voor het upgraden van Image Widget! Tevreden met deze plugin? Geef "
+"een <a href=\"%s\" target=\"_blank\">waardering</a>. Of kijk eens naar onze "
+"premium plugins, zoals <a href=\"%s\" target=\"_blank\">Events Calendar Pro</"
+"a>!"
+
+#: image-widget.php:405
+#, php-format
+msgid ""
+"Check out our other <a href=\"%s\" target=\"_blank\">plugins</a> including "
+"our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+msgstr ""
+"Bekijk onze anders <a href=\"%s\" target=\"_blank\">plugins</a> zoals <a "
+"href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+
+#: views/widget-admin.deprecated.php:10 views/widget-admin.php:23
+msgid "Title"
+msgstr "Titel"
+
+#: views/widget-admin.deprecated.php:13
+msgid "Image"
+msgstr "Afbeelding"
+
+#: views/widget-admin.deprecated.php:17
+msgid "Change Image"
+msgstr "Wijzig afbeelding"
+
+#: views/widget-admin.deprecated.php:17
+msgid "Add Image"
+msgstr "Afbeelding toevoegen"
+
+#: views/widget-admin.deprecated.php:25 views/widget-admin.php:29
+msgid "Caption"
+msgstr "Onderschrift"
+
+#: views/widget-admin.deprecated.php:28 views/widget-admin.php:32
+msgid "Link"
+msgstr "Link"
+
+#: views/widget-admin.deprecated.php:31 views/widget-admin.php:35
+msgid "Stay in Window"
+msgstr "Blijf in zelfde venster"
+
+#: views/widget-admin.deprecated.php:32 views/widget-admin.php:36
+msgid "Open New Window"
+msgstr "Open in nieuw venster"
+
+#: views/widget-admin.deprecated.php:35 views/widget-admin.php:66
+msgid "Width"
+msgstr "Breedte"
+
+#: views/widget-admin.deprecated.php:38 views/widget-admin.php:69
+msgid "Height"
+msgstr "Hoogte"
+
+#: views/widget-admin.deprecated.php:41 views/widget-admin.php:74
+msgid "Align"
+msgstr "Uitlijning"
+
+#: views/widget-admin.deprecated.php:43 views/widget-admin.php:76
+msgid "none"
+msgstr "geen"
+
+#: views/widget-admin.deprecated.php:44 views/widget-admin.php:77
+msgid "left"
+msgstr "links"
+
+#: views/widget-admin.deprecated.php:45 views/widget-admin.php:78
+msgid "center"
+msgstr "midden"
+
+#: views/widget-admin.deprecated.php:46 views/widget-admin.php:79
+msgid "right"
+msgstr "rechts"
+
+#: views/widget-admin.deprecated.php:49 views/widget-admin.php:26
+msgid "Alternate Text"
+msgstr "Alternatieve tekst"
+
+#: views/widget-admin.php:44
+msgid "Size"
+msgstr "Formaat"
+
+#: views/widget-admin.php:49
+msgid "Full Size"
+msgstr "Volledige groote"
+
+#: views/widget-admin.php:50
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+#: views/widget-admin.php:51
+msgid "Medium"
+msgstr "Gemiddeld"
+
+#: views/widget-admin.php:52
+msgid "Large"
+msgstr "Groot"
+
+#: views/widget-admin.php:54
+msgid "Custom"
+msgstr "Eigen"

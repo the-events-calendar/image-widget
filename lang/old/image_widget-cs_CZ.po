@@ -1,0 +1,97 @@
+# Translation of the Image Widget 3.1.4 WordPress plugin.
+# This file is distributed under the same license as the the Image Widget package.
+# Rüdiger Weiß <ruediger@mac.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Image Widget 3.1.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-01-30 14:15+0100\n"
+"PO-Revision-Date: 2012-08-28 16:17+0100\n"
+"Last-Translator: Vladislav Musílek <musilekv@seznam.cz>\n"
+"Language-Team: Rüdiger Weiß <ruediger@mac.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-Country: CZECH REPUBLIC\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+
+#: image-widget.php:33
+msgid "Showcase a single image with a Title, URL, and a Description"
+msgstr "Zobrazí obrázek s Titulkem, URL adresou a popisem"
+
+#: image-widget.php:35
+msgid "Image Widget"
+msgstr "Obrázek Widget"
+
+#: image-widget.php:114
+msgid "Insert Into Widget"
+msgstr "Vložit do Widgetu"
+
+#: image-widget.php:265
+msgid "Title:"
+msgstr "Titulek:"
+
+#: image-widget.php:268
+msgid "Image:"
+msgstr "Obrázek:"
+
+#: image-widget.php:272
+msgid "Change Image"
+msgstr "Změnit obrázek:"
+
+#: image-widget.php:272
+msgid "Add Image"
+msgstr "Přidej obrázek:"
+
+#: image-widget.php:295
+msgid "Caption:"
+msgstr "Nadpis:"
+
+#: image-widget.php:298
+msgid "Link:"
+msgstr "Odkaz:"
+
+#: image-widget.php:301
+msgid "Stay in Window"
+msgstr "Otevřít ve stejném okně"
+
+#: image-widget.php:302
+msgid "Open New Window"
+msgstr "Otevřít v novém okně"
+
+#: image-widget.php:305
+msgid "Width:"
+msgstr "Šířka:"
+
+#: image-widget.php:308
+msgid "Height:"
+msgstr "Výška:"
+
+#: image-widget.php:311
+msgid "Align:"
+msgstr "Zarovnání:"
+
+#: image-widget.php:313
+msgid "none"
+msgstr "žádné"
+
+#: image-widget.php:314
+msgid "left"
+msgstr "doleva"
+
+#: image-widget.php:315
+msgid "center"
+msgstr "doprostřed"
+
+#: image-widget.php:316
+msgid "right"
+msgstr "doprava"
+
+#: image-widget.php:331
+msgid "Alternate Text:"
+msgstr "Alternativní text:"
+

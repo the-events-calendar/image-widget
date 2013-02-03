@@ -1,0 +1,96 @@
+# Translation of the Image Widget 3.1.4 WordPress plugin.
+# This file is distributed under the same license as the the Image Widget package.
+# Rüdiger Weiß <ruediger@mac.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Image Widget 3.1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-06-21 00:00+0000\n"
+"PO-Revision-Date: 2011-06-21 00:00+0000\n"
+"Last-Translator: Takayuki Miyauchi <miya@theta.ne.jp>\n"
+"Language-Team: Rüdiger Weiß <ruediger@mac.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: Japan\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+
+#: image-widget.php:33
+msgid "Showcase a single image with a Title, URL, and a Description"
+msgstr "単一の画像を表示します。"
+
+#: image-widget.php:35
+msgid "Image Widget"
+msgstr "画像ウィジェット"
+
+#: image-widget.php:114
+msgid "Insert Into Widget"
+msgstr "ウィジェットに挿入"
+
+#: image-widget.php:265
+msgid "Title:"
+msgstr "タイトル:"
+
+#: image-widget.php:268
+msgid "Image:"
+msgstr "画像:"
+
+#: image-widget.php:272
+msgid "Change Image"
+msgstr "画像を変更"
+
+#: image-widget.php:272
+msgid "Add Image"
+msgstr "画像を追加"
+
+#: image-widget.php:295
+msgid "Caption:"
+msgstr "見出し:"
+
+#: image-widget.php:298
+msgid "Link:"
+msgstr "リンク:"
+
+#: image-widget.php:301
+msgid "Stay in Window"
+msgstr "同じウインドウ"
+
+#: image-widget.php:302
+msgid "Open New Window"
+msgstr "新しいウインドウ"
+
+#: image-widget.php:305
+msgid "Width:"
+msgstr "幅:"
+
+#: image-widget.php:308
+msgid "Height:"
+msgstr "高さ:"
+
+#: image-widget.php:311
+msgid "Align:"
+msgstr "配置:"
+
+#: image-widget.php:313
+msgid "none"
+msgstr "なし"
+
+#: image-widget.php:314
+msgid "left"
+msgstr "左"
+
+#: image-widget.php:315
+msgid "center"
+msgstr "中央"
+
+#: image-widget.php:316
+msgid "right"
+msgstr "右"
+
+#: image-widget.php:331
+msgid "Alternate Text:"
+msgstr "代替テキスト:"

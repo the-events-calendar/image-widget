@@ -10,7 +10,7 @@ Stable tag: 4.0.1
 
 *NEW: The Image Widget has been UPGRADED to work with WordPress 3.5+!!!*
 
-Simple image widget that uses native Wordpress upload thickbox to add image widgets to your site.
+A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 
 * MU Compatible
 * Handles image resizing and alignment
@@ -38,6 +38,10 @@ This plugin is actively supported and we will do our best to help you. In return
 1. Donate - if this is generating enough revenue to support our time it makes all the difference in the world
 https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
 1. Support us by buying our Premium plugins. In particular, check out our Events Calendar Pro http://tri.be/wordpress-events-calendar-pro/?src=imagewidget
+
+Note, we're also on github in case you want to add some pull requests or a fork!
+
+https://github.com/moderntribe/image-widget
 
 == Installation ==
 

@@ -17,10 +17,10 @@ class ImageWidgetDeprecated {
 		global $pagenow;
 		if ( 'widgets.php' == $pagenow ) {
 			wp_enqueue_style( 'thickbox' );
-			wp_enqueue_script( 'tribe-image-widget', plugins_url('resources/js/image-widget.deprecated.js', dirname(__FILE__)), array('thickbox'), FALSE, TRUE );
+			wp_enqueue_script( 'tribe-image-widget', plugins_url('resources/js/image-widget.deprecated.js', dirname(__FILE__)), array('thickbox'), Tribe_Image_Widget::VERSION, TRUE );
 		}
 		elseif ( 'media-upload.php' == $pagenow || 'async-upload.php' == $pagenow ) {
-			wp_enqueue_script( 'tribe-image-widget-fix-uploader', plugins_url('resources/js/image-widget.deprecated.upload-fixer.js', dirname(__FILE__)), array('jquery'), FALSE, TRUE );
+			wp_enqueue_script( 'tribe-image-widget-fix-uploader', plugins_url('resources/js/image-widget.deprecated.upload-fixer.js', dirname(__FILE__)), array('jquery'), Tribe_Image_Widget::VERSION, TRUE );
 			add_filter( 'image_send_to_editor', array( $this,'image_send_to_editor'), 1, 8 );
 			add_filter( 'gettext', array( $this, 'replace_text_in_thickbox' ), 1, 3 );
 			add_filter( 'media_upload_tabs', array( $this, 'media_upload_tabs' ) );

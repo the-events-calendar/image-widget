@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, brazilian portuguese, dutch, italian, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 4.0.1
+Stable tag: 4.0.3
 
 == Description ==
 
@@ -148,6 +148,14 @@ Filters a list of attributes used in the image link. Similar to 'wp_get_attachme
 Accepts $instance arguments
 
 == Changelog ==
+
+= 4.0.3 =
+
+Fixed javascript bug caused by log message.
+
+= 4.0.2 =
+
+Fix oversized screenshot.
 
 = 4.0.1 =
 

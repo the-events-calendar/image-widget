@@ -20,7 +20,6 @@ jQuery(document).ready(function($){
 			// Handle results from media manager.
 			frame.on('close',function( ) {
 				var attachments = frame.state().get('selection').toJSON();
-				console.log( attachments );
 				imageWidget.render( widget_id, widget_id_string, attachments[0] );
 			});
 

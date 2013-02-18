@@ -46,10 +46,10 @@ if ( !defined('ABSPATH') )
 				<?php
 				// Note: this is dumb. We shouldn't need to have to do this. There should really be a centralized function in core code for this.
 				$possible_sizes = apply_filters( 'image_size_names_choose', array(
-					'full'      => __('Full Size'),
-					'thumbnail' => __('Thumbnail'),
-					'medium'    => __('Medium'),
-					'large'     => __('Large'),
+					'full'      => __('Full Size', 'image_widget'),
+					'thumbnail' => __('Thumbnail', 'image_widget'),
+					'medium'    => __('Medium', 'image_widget'),
+					'large'     => __('Large', 'image_widget'),
 				) );
 				$possible_sizes[self::CUSTOM_IMAGE_SIZE_SLUG] = __('Custom', 'image_widget');
 

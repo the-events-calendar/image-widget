@@ -10,7 +10,7 @@ if ( !defined('ABSPATH') )
 	$id_prefix = $this->get_field_id('');
 ?>
 <div class="uploader">
-	<input type="submit" class="button" name="<?php echo $this->get_field_name('uploader_button'); ?>" id="<?php echo $this->get_field_id('uploader_button'); ?>" value="<?php _e('Select an Image', 'tribe-upload-tester'); ?>" onclick="imageWidget.uploader( '<?php echo $this->id; ?>', '<?php echo $id_prefix; ?>' ); return false;" />
+	<input type="submit" class="button" name="<?php echo $this->get_field_name('uploader_button'); ?>" id="<?php echo $this->get_field_id('uploader_button'); ?>" value="<?php _e('Select an Image', 'image_widget'); ?>" onclick="imageWidget.uploader( '<?php echo $this->id; ?>', '<?php echo $id_prefix; ?>' ); return false;" />
 	<div class="tribe_preview" id="<?php echo $this->get_field_id('preview'); ?>">
 		<?php echo $this->get_image_html($instance, false); ?>
 	</div>

@@ -1,10 +1,10 @@
 === Image Widget ===
 Contributors: ModernTribe, peterchester, mattwiebe
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
-Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, brazilian portuguese, dutch, italian, spanish, swedish, widget-only
+Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, italian, japanese, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 4.0.4
+Stable tag: 4.0.5
 
 == Description ==
 
@@ -22,9 +22,11 @@ A simple image widget that uses the native WordPress media manager to add image 
 
 Supported Languages:
 
+* Arabic
 * Brazilian Portuguese
 * Dutch
 * Italian
+* Japanese
 * Spanish
 * Swedish
 
@@ -148,6 +150,11 @@ Filters a list of attributes used in the image link. Similar to 'wp_get_attachme
 Accepts $instance arguments
 
 == Changelog ==
+
+= 4.0.5 =
+
+* Added Japanese (and fixed a minor language string bug - thank you @understandard)
+* Added Arabic (thank you @modmenpc)
 
 = 4.0.4 =
 

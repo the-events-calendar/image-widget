@@ -149,11 +149,20 @@ Accepts $instance arguments
 Filters a list of attributes used in the image link. Similar to 'wp_get_attachment_image_attributes'
 Accepts $instance arguments
 
+= Have You Supported the Image Widget? =
+
+If so, then THANK YOU! Also, feel free to add this line to your wp-config.php file to prevent the image widget from displaying a message after upgrades.
+
+define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
+
+For more info on the philosophy here, check out our blog post: http://tri.be/define-i-have-donated-true/
+
 == Changelog ==
 
 = 4.0.6 =
 
 * Rename all language files and implement a couple more minor language bug fixes a la @understandard
+* Added support for the constant 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET' to turn off the message that appears after upgrading.  (@crienoloog, i hope this puts a smile on your face.)
 
 = 4.0.5 =
 

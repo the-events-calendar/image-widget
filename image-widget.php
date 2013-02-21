@@ -47,7 +47,9 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		add_action( 'plugin_row_meta', array( $this, 'plugin_row_meta' ),10 ,2 );
 
-		add_action( 'admin_notices', array( $this, 'post_upgrade_nag') );
+		if ( !defined('I_HAVE_SUPPORTED_THE_IMAGE_WIDGET') ) 
+			add_action( 'admin_notices', array( $this, 'post_upgrade_nag') );
+		
 		add_action( 'network_admin_notices', array( $this, 'post_upgrade_nag') );
 	}
 

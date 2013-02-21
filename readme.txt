@@ -153,7 +153,7 @@ Accepts $instance arguments
 
 = 4.0.6 =
 
-Couple more minor language bug fixes a la @understandard
+* Rename all language files and implement a couple more minor language bug fixes a la @understandard
 
 = 4.0.5 =
 

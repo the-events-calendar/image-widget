@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Image Widget\n"
 "POT-Creation-Date: 2013-01-30 23:34-0800\n"
-"PO-Revision-Date: 2013-02-02 18:38-0500\n"
-"Last-Translator: Andres Gomez <javiandgo@gmail.com>\n"
+"PO-Revision-Date: 2013-03-19 01:24-0300\n"
+"Last-Translator: \n"
 "Language-Team: @ModernTribe <pro@tri.be>\n"
 "Language: English\n"
 "MIME-Version: 1.0\n"
@@ -19,46 +19,36 @@ msgstr ""
 
 #: image-widget.php:40
 msgid "Showcase a single image with a Title, URL, and a Description"
-msgstr "Mostrar una sola imagen con un título, URL, y una descripción"
+msgstr "Muestra una imagen con un título, una URL, y una descripción"
 
 #: image-widget.php:42
 msgid "Image Widget"
-msgstr "Widget de Imagenes"
+msgstr "Widget de una imagen"
 
-#: image-widget.php:74 views/widget-admin.php:13
+#: image-widget.php:74
+#: views/widget-admin.php:13
 msgid "Select an Image"
 msgstr "Seleccione una Imagen"
 
-#: image-widget.php:75 lib/ImageWidgetDeprecated.php:66
+#: image-widget.php:75
+#: lib/ImageWidgetDeprecated.php:66
 msgid "Insert Into Widget"
 msgstr "Insertar en el Widget"
 
 #: image-widget.php:390
 #, php-format
-msgid ""
-"Thanks for upgrading the Image Widget! If you like this plugin, please "
-"consider <a href=\"%s\" target=\"_blank\">rating it</a> and maybe even check "
-"out our premium plugins including our <a href=\"%s\" target=\"_blank"
-"\">Events Calendar Pro</a>!"
-msgstr ""
-"Gracias por actualizar Image  Widget! Si te gusta este plugin, por favor "
-"considera <a href=\"%s\" target=\"_blank\">Calificarlo</a> y puede que "
-"quieras echarle un vistazo a nuestros plugins premium, entre ellos nuestro "
-"<a href=\"%s\" target=\"_blank\">Calendario de Eventos Pro</a>!"
+msgid "Thanks for upgrading the Image Widget! If you like this plugin, please consider <a href=\"%s\" target=\"_blank\">rating it</a> and maybe even check out our premium plugins including our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+msgstr "Gracias por actualizar Image Widget! Si te gusta este plugin, por favor considera <a href=\"%s\" target=\"_blank\">Calificarlo</a> y puede que quieras echarle un vistazo a nuestros plugins premium, entre ellos nuestro <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
 
 #: image-widget.php:405
 #, php-format
-msgid ""
-"Check out our other <a href=\"%s\" target=\"_blank\">plugins</a> including "
-"our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
-msgstr ""
-"Echa un vistazo a nuestros <a href=\"%s\" target=\"_blank\">plugins</a> "
-"incluyendo nuestro <a href=\"%s\" target=\"_blank\">Calendario de Eventos "
-"Pro</a>!"
+msgid "Check out our other <a href=\"%s\" target=\"_blank\">plugins</a> including our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+msgstr "Echa un vistazo a nuestros <a href=\"%s\" target=\"_blank\">plugins</a> incluyendo nuestro <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
 
-#: views/widget-admin.deprecated.php:10 views/widget-admin.php:23
+#: views/widget-admin.deprecated.php:10
+#: views/widget-admin.php:23
 msgid "Title"
-msgstr "Titulo"
+msgstr "Título"
 
 #: views/widget-admin.deprecated.php:13
 msgid "Image"
@@ -72,53 +62,65 @@ msgstr "Cambiar Imagen"
 msgid "Add Image"
 msgstr "Añadir Imagen"
 
-#: views/widget-admin.deprecated.php:25 views/widget-admin.php:29
+#: views/widget-admin.deprecated.php:25
+#: views/widget-admin.php:29
 msgid "Caption"
 msgstr "Leyenda"
 
-#: views/widget-admin.deprecated.php:28 views/widget-admin.php:32
+#: views/widget-admin.deprecated.php:28
+#: views/widget-admin.php:32
 msgid "Link"
-msgstr "Link"
+msgstr "Enlace"
 
-#: views/widget-admin.deprecated.php:31 views/widget-admin.php:35
+#: views/widget-admin.deprecated.php:31
+#: views/widget-admin.php:35
 msgid "Stay in Window"
-msgstr "Permanecer en la ventana"
+msgstr "Abrir en la misma ventana"
 
-#: views/widget-admin.deprecated.php:32 views/widget-admin.php:36
+#: views/widget-admin.deprecated.php:32
+#: views/widget-admin.php:36
 msgid "Open New Window"
-msgstr "Abrir en nueva ventada"
+msgstr "Abrir en ventana nueva"
 
-#: views/widget-admin.deprecated.php:35 views/widget-admin.php:66
+#: views/widget-admin.deprecated.php:35
+#: views/widget-admin.php:66
 msgid "Width"
 msgstr "Ancho"
 
-#: views/widget-admin.deprecated.php:38 views/widget-admin.php:69
+#: views/widget-admin.deprecated.php:38
+#: views/widget-admin.php:69
 msgid "Height"
 msgstr "Alto"
 
-#: views/widget-admin.deprecated.php:41 views/widget-admin.php:74
+#: views/widget-admin.deprecated.php:41
+#: views/widget-admin.php:74
 msgid "Align"
 msgstr "Alinear"
 
-#: views/widget-admin.deprecated.php:43 views/widget-admin.php:76
+#: views/widget-admin.deprecated.php:43
+#: views/widget-admin.php:76
 msgid "none"
-msgstr "Ninguna"
+msgstr "Ninguno"
 
-#: views/widget-admin.deprecated.php:44 views/widget-admin.php:77
+#: views/widget-admin.deprecated.php:44
+#: views/widget-admin.php:77
 msgid "left"
-msgstr "izquierda"
+msgstr "Izquierda"
 
-#: views/widget-admin.deprecated.php:45 views/widget-admin.php:78
+#: views/widget-admin.deprecated.php:45
+#: views/widget-admin.php:78
 msgid "center"
-msgstr "centrar"
+msgstr "Centrado"
 
-#: views/widget-admin.deprecated.php:46 views/widget-admin.php:79
+#: views/widget-admin.deprecated.php:46
+#: views/widget-admin.php:79
 msgid "right"
-msgstr "derecha"
+msgstr "Derecha"
 
-#: views/widget-admin.deprecated.php:49 views/widget-admin.php:26
+#: views/widget-admin.deprecated.php:49
+#: views/widget-admin.php:26
 msgid "Alternate Text"
-msgstr "Texto Alterno"
+msgstr "Texto Alternativo"
 
 #: views/widget-admin.php:44
 msgid "Size"
@@ -143,3 +145,4 @@ msgstr "Largo"
 #: views/widget-admin.php:54
 msgid "Custom"
 msgstr "Personalizado"
+

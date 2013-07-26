@@ -4,11 +4,9 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, italian, japanese, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 4.0.7
+Stable tag: 4.0.8
 
 == Description ==
-
-*NEW: The Image Widget has been UPGRADED to work with WordPress 3.5+!!!*
 
 A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 
@@ -19,6 +17,7 @@ A simple image widget that uses the native WordPress media manager to add image 
 * Very versatile.  All fields are optional.
 * Upload, link to external image, or select an image from your media collection using the built in thickbox browser.
 * Supports override of template so that you can override the template for your theme!
+* Responsive
 
 Supported Languages:
 
@@ -105,13 +104,25 @@ THIS IS DEPRECATED AND WILL EVENTUALLY BE DELETED
 
 *image_widget_image_width*
 
-Filters the display width of the image. Hint: override this to use this in responsive designs :)
+Filters the display width of the image.
 Accepts additional $args and $instance arguments.
 
 *image_widget_image_height*
 
 Filters the display height of the image.
 Accepts additional $args and $instance arguments.
+
+*image_widget_image_maxwidth*
+
+Filters the inline max-width style of the image. Hint: override this to use this in responsive designs :)
+Accepts additional $args and $instance arguments.
+Return null to remove this css from the image output (defaults to '100%').
+
+*image_widget_image_maxheight*
+
+Filters the inline max-height style of the image.
+Accepts additional $args and $instance arguments.
+Return null to remove this css from the image output (defaults to null)
 
 *image_widget_image_size*
 
@@ -158,6 +169,10 @@ define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
 For more info on the philosophy here, check out our blog post: http://tri.be/define-i-have-donated-true/
 
 == Changelog ==
+
+= 4.0.8 =
+
+* Responsive support in honor of Josh Broton's WordCamp SF talk about responsive design. max-width now defaults to 100%;
 
 = 4.0.7 =
 

@@ -1,7 +1,7 @@
 === Image Widget ===
 Contributors: ModernTribe, peterchester, mattwiebe
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
-Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, italian, japanese, spanish, swedish, widget-only
+Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, french, italian, japanese, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 3.6
 Stable tag: 4.0.8
@@ -24,6 +24,7 @@ Supported Languages:
 * Arabic
 * Brazilian Portuguese
 * Dutch
+* French
 * Italian
 * Japanese
 * Spanish

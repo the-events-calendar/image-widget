@@ -279,7 +279,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		$instance['height'] = abs( $instance['height'] );
 
 		$attr = array();
-		$attr['alt'] = $instance['title'];
+		$attr['alt'] = ( !empty( $instance['alt'] ) ) ? $instance['alt'] : $instance['title'];
 		if (is_array($size)) {
 			$attr['class'] = 'attachment-'.join('x',$size);
 		} else {

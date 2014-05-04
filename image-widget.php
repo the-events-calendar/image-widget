@@ -182,6 +182,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			width: 100%;
 			height: 34px;
 			line-height: 33px;
+			margin-top: 15px;
 		}
 		.tribe_preview .aligncenter {
 			display: block;

@@ -4,7 +4,7 @@ Plugin Name: Image Widget
 Plugin URI: http://wordpress.org/extend/plugins/image-widget/
 Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 Author: Modern Tribe, Inc.
-Version: 4.0.8
+Version: 4.0.9
 Author URI: http://m.tri.be/26
 */
 
@@ -23,7 +23,7 @@ add_action('widgets_init', 'tribe_load_image_widget');
  **/
 class Tribe_Image_Widget extends WP_Widget {
 
-	const VERSION = '4.0.6';
+	const VERSION = '4.0.9';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
 

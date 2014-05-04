@@ -195,6 +195,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		}
 		.tribe_preview img {
 			margin: 10px 0;
+			height: auto;
 		}
 	</style>
 	<?php

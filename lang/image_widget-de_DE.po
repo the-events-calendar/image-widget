@@ -1,0 +1,145 @@
+# Translation of the Image Widget 4.0 WordPress plugin.
+# This file is distributed under the same license as the the Image Widget package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Image Widget\n"
+"POT-Creation-Date: 2013-01-30 23:34-0800\n"
+"PO-Revision-Date: 2014-02-02 22:51+0100\n"
+"Last-Translator: Daniel Schmidt › XP.DT <ds@xp-dt.de>\n"
+"Language-Team: @XPDT <office@xp-dt.de>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: image-widget.php:40
+msgid "Showcase a single image with a Title, URL, and a Description"
+msgstr "Ein einzelnes Bild mit Titel, Link und Beschreibung darstellen"
+
+#: image-widget.php:42
+msgid "Image Widget"
+msgstr "Bilder Widget"
+
+#: image-widget.php:74 views/widget-admin.php:13
+msgid "Select an Image"
+msgstr "Bild auswählen"
+
+#: image-widget.php:75 lib/ImageWidgetDeprecated.php:66
+msgid "Insert Into Widget"
+msgstr "ins Widget übernehmen"
+
+#: image-widget.php:390
+#, php-format
+msgid ""
+"Thanks for upgrading the Image Widget! If you like this plugin, please "
+"consider <a href=\"%s\" target=\"_blank\">rating it</a> and maybe even check "
+"out our premium plugins including our <a href=\"%s\" target=\"_blank"
+"\">Events Calendar Pro</a>!"
+msgstr ""
+"Danke für das Widget-Upgrade. Wenn Sie das Plugin mögen, würden wir uns "
+"freuen, wenn Sie <a href=\"%s\" target=\"_blank\">es bewerten</a> und "
+"vielleicht auch einen Blick auf unsere anderen Premium Plugins wie <a href="
+"\"%s\" target=\"_blank\">Events Calendar Pro</a> werfen!"
+
+#: image-widget.php:405
+#, php-format
+msgid ""
+"Check out our other <a href=\"%s\" target=\"_blank\">plugins</a> including "
+"our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+msgstr ""
+"Werfen Sie doch auch einmal einen Blick auf unsere anderen <a href=\"%s\" "
+"target=\"_blank\">Plugins</a> wie <a href=\"%s\" target=\"_blank\">Events "
+"Calendar Pro</a>!"
+
+#: views/widget-admin.deprecated.php:10 views/widget-admin.php:23
+msgid "Title"
+msgstr "Titel"
+
+#: views/widget-admin.deprecated.php:13
+msgid "Image"
+msgstr "Bild"
+
+#: views/widget-admin.deprecated.php:17
+msgid "Change Image"
+msgstr "Bild ändern"
+
+#: views/widget-admin.deprecated.php:17
+msgid "Add Image"
+msgstr "Bild hinzufügen"
+
+#: views/widget-admin.deprecated.php:25 views/widget-admin.php:29
+msgid "Caption"
+msgstr "Bildunterschrift"
+
+#: views/widget-admin.deprecated.php:28 views/widget-admin.php:32
+msgid "Link"
+msgstr "Verlinkung"
+
+#: views/widget-admin.deprecated.php:31 views/widget-admin.php:35
+msgid "Stay in Window"
+msgstr "im gleichen Fenster öffnen"
+
+#: views/widget-admin.deprecated.php:32 views/widget-admin.php:36
+msgid "Open New Window"
+msgstr "in einem neuen Fenster öffnen"
+
+#: views/widget-admin.deprecated.php:35 views/widget-admin.php:66
+msgid "Width"
+msgstr "Breite"
+
+#: views/widget-admin.deprecated.php:38 views/widget-admin.php:69
+msgid "Height"
+msgstr "Höhe"
+
+#: views/widget-admin.deprecated.php:41 views/widget-admin.php:74
+msgid "Align"
+msgstr "Ausrichtung"
+
+#: views/widget-admin.deprecated.php:43 views/widget-admin.php:76
+msgid "none"
+msgstr "keine"
+
+#: views/widget-admin.deprecated.php:44 views/widget-admin.php:77
+msgid "left"
+msgstr "links"
+
+#: views/widget-admin.deprecated.php:45 views/widget-admin.php:78
+msgid "center"
+msgstr "mittig"
+
+#: views/widget-admin.deprecated.php:46 views/widget-admin.php:79
+msgid "right"
+msgstr "rechts"
+
+#: views/widget-admin.deprecated.php:49 views/widget-admin.php:26
+msgid "Alternate Text"
+msgstr "Alternativ-Text"
+
+#: views/widget-admin.php:44
+msgid "Size"
+msgstr "Größe"
+
+#: views/widget-admin.php:49
+msgid "Full Size"
+msgstr "Volle Größe"
+
+#: views/widget-admin.php:50
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+#: views/widget-admin.php:51
+msgid "Medium"
+msgstr "mittel"
+
+#: views/widget-admin.php:52
+msgid "Large"
+msgstr "groß"
+
+#: views/widget-admin.php:54
+msgid "Custom"
+msgstr "nutzerdefiniert"

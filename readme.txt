@@ -1,7 +1,7 @@
 === Image Widget ===
 Contributors: ModernTribe, peterchester, mattwiebe
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
-Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, italian, japanese, spanish, swedish, widget-only
+Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 3.6
 Stable tag: 4.0.9
@@ -24,8 +24,11 @@ Supported Languages:
 * Arabic
 * Brazilian Portuguese
 * Dutch
+* German
+* Hebrew
 * Italian
 * Japanese
+* Polish
 * Spanish
 * Swedish
 
@@ -171,6 +174,12 @@ For more info on the philosophy here, check out our blog post: http://tri.be/def
 == Changelog ==
 
 = 4.0.9 =
+
+* Fix image stretching bug in admin (Thanks @kyleunzicker)
+* Add polish translation (thank you @difreo)
+* Add hebrew translation (thank you Ariel Klikstein)
+* Add german translation (thank you Daniel Schmidt)
+* Fix "Alt" text in the widget source to use actual "Alt" text (thanks @adoliver and @Degas)
 
 = 4.0.8 =
 

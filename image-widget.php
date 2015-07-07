@@ -4,7 +4,7 @@ Plugin Name: Image Widget
 Plugin URI: http://wordpress.org/extend/plugins/image-widget/
 Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 Author: Modern Tribe, Inc.
-Version: 4.0.9
+Version: 4.1
 Author URI: http://m.tri.be/26
 */
 
@@ -23,7 +23,7 @@ add_action('widgets_init', 'tribe_load_image_widget');
  **/
 class Tribe_Image_Widget extends WP_Widget {
 
-	const VERSION = '4.0.9';
+	const VERSION = '4.1';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
 
@@ -127,7 +127,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		if ( current_user_can('unfiltered_html') ) {
 			$instance['description'] = $new_instance['description'];
 		} else {
-			$instance['description'] = stripslashes( wp_filter_post_kses( addslashes($new_instance['description']) ) );
+			$instance['description'] = wp_filter_post_kses($new_instance['description']);
 		}
 		$instance['link'] = $new_instance['link'];
 		$instance['linktarget'] = $new_instance['linktarget'];
@@ -330,7 +330,8 @@ class Tribe_Image_Widget extends WP_Widget {
 		if ( !empty( $instance['size'] ) && $instance['size'] != self::CUSTOM_IMAGE_SIZE_SLUG ) {
 			$size = $instance['size'];
 		} elseif ( isset( $instance['width'] ) && is_numeric($instance['width']) && isset( $instance['height'] ) && is_numeric($instance['height']) ) {
-			$size = array(abs($instance['width']),abs($instance['height']));
+			//$size = array(abs($instance['width']),abs($instance['height']));
+			$size = array($instance['width'],$instance['height']);
 		} else {
 			$size = 'full';
 		}

@@ -31,6 +31,8 @@ if ( !defined('ABSPATH') )
 
 	<p><label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link', 'image_widget'); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id('link'); ?>" name="<?php echo $this->get_field_name('link'); ?>" type="text" value="<?php echo esc_attr(strip_tags($instance['link'])); ?>" /><br />
+	<label for="<?php echo $this->get_field_id('linkid'); ?>"><?php _e('Link ID', 'image_widget'); ?>:</label>
+	<input class="widefat" id="<?php echo $this->get_field_id('linkid'); ?>" name="<?php echo $this->get_field_name('linkid'); ?>" type="text" value="<?php echo esc_attr(strip_tags($instance['linkid'])); ?>" /><br />
 	<select name="<?php echo $this->get_field_name('linktarget'); ?>" id="<?php echo $this->get_field_id('linktarget'); ?>">
 		<option value="_self"<?php selected( $instance['linktarget'], '_self' ); ?>><?php _e('Stay in Window', 'image_widget'); ?></option>
 		<option value="_blank"<?php selected( $instance['linktarget'], '_blank' ); ?>><?php _e('Open New Window', 'image_widget'); ?></option>

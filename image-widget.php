@@ -92,6 +92,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'] );
 			$instance['description'] = apply_filters( 'widget_text', $instance['description'], $args, $instance );
 			$instance['link'] = apply_filters( 'image_widget_image_link', esc_url( $instance['link'] ), $args, $instance );
+			$instance['linkid'] = apply_filters( 'image_widget_image_link_id', esc_attr( $instance['linkid'] ), $args, $instance );
 			$instance['linktarget'] = apply_filters( 'image_widget_image_link_target', esc_attr( $instance['linktarget'] ), $args, $instance );
 			$instance['width'] = apply_filters( 'image_widget_image_width', abs( $instance['width'] ), $args, $instance );
 			$instance['height'] = apply_filters( 'image_widget_image_height', abs( $instance['height'] ), $args, $instance );
@@ -132,6 +133,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			$instance['description'] = wp_filter_post_kses($new_instance['description']);
 		}
 		$instance['link'] = $new_instance['link'];
+		$instance['linkid'] = $new_instance['linkid'];
 		$instance['linktarget'] = $new_instance['linktarget'];
 		$instance['width'] = abs( $new_instance['width'] );
 		$instance['height'] =abs( $new_instance['height'] );
@@ -214,6 +216,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			'title' => '',
 			'description' => '',
 			'link' => '',
+			'linkid' => '',
 			'linktarget' => '',
 			'width' => 0,
 			'height' => 0,
@@ -252,6 +255,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		if ( $include_link && !empty( $instance['link'] ) ) {
 			$attr = array(
 				'href' => $instance['link'],
+				'id' => $instance['linkid'],
 				'target' => $instance['linktarget'],
 				'class' => 	$this->widget_options['classname'].'-image-link',
 				'title' => ( !empty( $instance['alt'] ) ) ? $instance['alt'] : $instance['title'],

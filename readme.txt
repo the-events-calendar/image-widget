@@ -19,21 +19,6 @@ A simple image widget that uses the native WordPress media manager to add image 
 * Supports override of template so that you can override the template for your theme!
 * Responsive
 
-Supported Languages:
-
-* Arabic
-* Brazilian Portuguese
-* Dutch
-* German
-* Hebrew
-* Italian
-* Japanese
-* Polish
-* Spanish
-* Swedish
-
-If you would like your own language to be supported, please [contribute translations](http://wordpress.org/support/topic/image-widget-40-translations-needed-2).
-
 This plugin is actively supported and we will do our best to help you. In return we simply as 3 things:
 
 1. Help Out. If you see a question on the forum you can help with or have a great idea and want to code it up and submit a patch, that would be just plain awesome and we will shower your with praise. Might even be a good way to get to know us and lead to some paid work if you freelance.  Also, we are happy to post translations if you provide them.
@@ -173,6 +158,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 = 4.2 =
 
 * Security - Prevent direct access to directories (thank you @ramiy)
+* Translatins - Remove po/mo files, migrate to translate.wordpress.org
 
 = 4.1.2 =
 

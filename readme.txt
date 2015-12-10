@@ -23,7 +23,7 @@ This plugin is actively supported and we will do our best to help you. In return
 
 1. Help Out. If you see a question on the forum you can help with or have a great idea and want to code it up and submit a patch, that would be just plain awesome and we will shower your with praise. Might even be a good way to get to know us and lead to some paid work if you freelance.  Also, we are happy to post translations if you provide them.
 1. [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6) - if this is generating enough revenue to support our time it makes all the difference in the world.
-1. Support us by buying our Premium plugins. In particular, check out our [Events Calendar Pro](http://tri.be/wordpress-events-calendar-pro/?src=imagewidget).
+1. Support us by buying our Premium plugins. In particular, check out [Events Calendar Pro](https://theeventscalendar.com/product/wordpress-events-calendar-pro/?src=imagewidget) and [Event Tickets Plus](https://theeventscalendar.com/product/wordpress-event-tickets-plus/?src=imagewidget).
 
 Note, we're also on github in case you want to add some pull requests or a fork!
 
@@ -158,7 +158,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 = 4.2 =
 
 * Security - Prevent direct access to directories (thank you @ramiy)
-* Translations - Remove po/mo files, migrate to translate.wordpress.org
+* Translations - Remove po/mo files, migrate to translate.wordpress.org language packs
 * Feature - Add support for the rel attribute
 * Feature - Adding an opt-in integration with Freemius
 

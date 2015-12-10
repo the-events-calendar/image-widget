@@ -1,9 +1,9 @@
 === Image Widget ===
-Contributors: ModernTribe, peterchester, ramiy
+Contributors: ModernTribe, peterchester, borkweb, zbtirrell, ramiy
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
 Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
-Tested up to: 3.9
+Tested up to: 4.4
 Stable tag: 4.2
 
 == Description ==
@@ -158,7 +158,9 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 = 4.2 =
 
 * Security - Prevent direct access to directories (thank you @ramiy)
-* Translatins - Remove po/mo files, migrate to translate.wordpress.org
+* Translations - Remove po/mo files, migrate to translate.wordpress.org
+* Feature - Add support for the rel attribute
+* Feature - Adding an opt-in integration with Freemius
 
 = 4.1.2 =
 

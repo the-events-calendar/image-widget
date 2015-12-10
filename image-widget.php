@@ -13,6 +13,37 @@ if ( !defined('ABSPATH') ) {
 	die('-1');
 }
 
+// Create a helper function for easy SDK access.
+function iw_fs() {
+    global $iw_fs;
+
+    if ( ! isset( $iw_fs ) ) {
+        // Include Freemius SDK.
+        require_once dirname(__FILE__) . '/freemius/start.php';
+
+        $iw_fs = fs_dynamic_init( array(
+            'id'                => '117',
+            'slug'              => 'image-widget',
+            'public_key'        => 'pk_355c4d1228571fd6f777fb989652e',
+            'is_premium'        => false,
+            'has_addons'        => false,
+            'has_paid_plans'    => false,
+            'menu'              => array(
+                'slug'       => 'image-widget',
+	            'first-path' => 'widgets.php',
+                'account'    => false,
+                'contact'    => false,
+                'support'    => false,
+            ),
+        ) );
+    }
+
+    return $iw_fs;
+}
+
+// Init Freemius.
+iw_fs();
+
 // Load the widget on widgets_init
 function tribe_load_image_widget() {
 	register_widget('Tribe_Image_Widget');

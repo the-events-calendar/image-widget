@@ -26,6 +26,10 @@ if ( !defined('ABSPATH') )
 	<p><label for="<?php echo $this->get_field_id('alt'); ?>"><?php _e('Alternate Text', 'image_widget'); ?>:</label>
 		<input class="widefat" id="<?php echo $this->get_field_id('alt'); ?>" name="<?php echo $this->get_field_name('alt'); ?>" type="text" value="<?php echo esc_attr(strip_tags($instance['alt'])); ?>" /></p>
 
+	<p><label for="<?php echo $this->get_field_id('rel'); ?>"><?php _e('Related', 'image_widget'); ?>:</label>
+		<input class="widefat" id="<?php echo $this->get_field_id('rel'); ?>" name="<?php echo $this->get_field_name('rel'); ?>" type="text" value="<?php echo esc_attr(strip_tags($instance['rel'])); ?>" /><br>
+		<span class="description"><?php _e('A recommended HTML5 related terms list is availlable <a href="http://microformats.org/wiki/existing-rel-values#HTML5_link_type_extensions" target="_blank">here</a>.', 'image_widget'); ?></span></p>
+
 	<p><label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Caption', 'image_widget'); ?>:</label>
 	<textarea rows="8" class="widefat" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>"><?php echo format_to_edit($instance['description']); ?></textarea></p>
 

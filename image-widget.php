@@ -100,6 +100,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			$instance['maxheight'] = apply_filters( 'image_widget_image_maxheight', esc_attr( $instance['maxheight'] ), $args, $instance );
 			$instance['align'] = apply_filters( 'image_widget_image_align', esc_attr( $instance['align'] ), $args, $instance );
 			$instance['alt'] = apply_filters( 'image_widget_image_alt', esc_attr( $instance['alt'] ), $args, $instance );
+			$instance['rel'] = apply_filters( 'image_widget_image_rel', esc_attr( $instance['rel'] ), $args, $instance );
 
 			if ( !defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) {
 				$instance['attachment_id'] = ( $instance['attachment_id'] > 0 ) ? $instance['attachment_id'] : $instance['image'];
@@ -142,6 +143,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		}
 		$instance['align'] = $new_instance['align'];
 		$instance['alt'] = $new_instance['alt'];
+		$instance['rel'] = $new_instance['rel'];
 
 		// Reverse compatibility with $image, now called $attachement_id
 		if ( !defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) && $new_instance['attachment_id'] > 0 ) {
@@ -226,6 +228,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			'imageurl' => '', // reverse compatible.
 			'align' => 'none',
 			'alt' => '',
+			'rel' => '',
 		);
 
 		if ( !defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) {
@@ -259,6 +262,7 @@ class Tribe_Image_Widget extends WP_Widget {
 				'target' => $instance['linktarget'],
 				'class' => 	$this->widget_options['classname'].'-image-link',
 				'title' => ( !empty( $instance['alt'] ) ) ? $instance['alt'] : $instance['title'],
+				'rel' => $instance['rel'],
 			);
 			$attr = apply_filters('image_widget_link_attributes', $attr, $instance );
 			$attr = array_map( 'esc_attr', $attr );

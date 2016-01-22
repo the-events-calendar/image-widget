@@ -94,6 +94,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			$instance['link'] = apply_filters( 'image_widget_image_link', esc_url( $instance['link'] ), $args, $instance );
 			$instance['linkid'] = apply_filters( 'image_widget_image_link_id', esc_attr( $instance['linkid'] ), $args, $instance );
 			$instance['linktarget'] = apply_filters( 'image_widget_image_link_target', esc_attr( $instance['linktarget'] ), $args, $instance );
+			$instance['category'] = apply_filters( 'image_widget_category', esc_attr( $instance['category'] ), $args, $instance );
 			$instance['width'] = apply_filters( 'image_widget_image_width', abs( $instance['width'] ), $args, $instance );
 			$instance['height'] = apply_filters( 'image_widget_image_height', abs( $instance['height'] ), $args, $instance );
 			$instance['maxwidth'] = apply_filters( 'image_widget_image_maxwidth', esc_attr( $instance['maxwidth'] ), $args, $instance );
@@ -111,6 +112,23 @@ class Tribe_Image_Widget extends WP_Widget {
 
 			// No longer using extracted vars. This is here for backwards compatibility.
 			extract( $instance );
+
+			// Show on category page(s)
+			if ( ! empty($instance['category']) ) {
+
+				$queried_object = get_queried_object();
+
+				if ( $queried_object->taxonomy == 'category' ) {
+
+					$category_children = get_term_children( $instance['category'], 'category' );
+
+					if ( $queried_object->term_id == $instance['category'] || in_array($queried_object->term_id, $category_children) ) {
+						include( $this->getTemplateHierarchy( 'widget' ) );
+						return;
+					}
+				}
+				return;
+			}
 
 			include( $this->getTemplateHierarchy( 'widget' ) );
 		}
@@ -136,6 +154,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		$instance['link'] = $new_instance['link'];
 		$instance['linkid'] = $new_instance['linkid'];
 		$instance['linktarget'] = $new_instance['linktarget'];
+		$instance['category'] = $new_instance['category'];
 		$instance['width'] = abs( $new_instance['width'] );
 		$instance['height'] =abs( $new_instance['height'] );
 		if ( !defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) {
@@ -220,6 +239,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			'link' => '',
 			'linkid' => '',
 			'linktarget' => '',
+			'category' => '',
 			'width' => 0,
 			'height' => 0,
 			'maxwidth' => '100%',

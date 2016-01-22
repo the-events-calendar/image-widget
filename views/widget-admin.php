@@ -42,6 +42,16 @@ if ( !defined('ABSPATH') )
 		<option value="_blank"<?php selected( $instance['linktarget'], '_blank' ); ?>><?php _e('Open New Window', 'image_widget'); ?></option>
 	</select></p>
 
+	<p><label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Show on category page(s)', 'image_widget'); ?>:</label>
+	<?php
+	$args = array(
+		'show_option_none' => __('All Categories', 'image_widget'),
+		'selected' => $instance['category'],
+		'hierarchical' => 1,
+		'id' => $this->get_field_id('category'),
+		'name' => $this->get_field_name('category')
+	);
+	wp_dropdown_categories( $args ); ?><br><span class="description">Categories are hierarchical.</span></p>
 
 	<?php
 	// Backwards compatibility prior to storing attachment ids

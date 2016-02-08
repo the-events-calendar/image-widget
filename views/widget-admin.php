@@ -49,19 +49,9 @@ if ( !defined('ABSPATH') )
 	<div id="<?php echo $this->get_field_id('custom_size_selector'); ?>" <?php if ( empty($instance['attachment_id']) && !empty($instance['imageurl']) ) { $instance['size'] = self::CUSTOM_IMAGE_SIZE_SLUG; ?>style="display:none;"<?php } ?>>
 		<p><label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Size', 'image_widget'); ?>:</label>
 			<select name="<?php echo $this->get_field_name('size'); ?>" id="<?php echo $this->get_field_id('size'); ?>" onChange="imageWidget.toggleSizes( '<?php echo $this->id; ?>', '<?php echo $id_prefix; ?>' );">
-				<?php
-				// Note: this is dumb. We shouldn't need to have to do this. There should really be a centralized function in core code for this.
-				$possible_sizes = apply_filters( 'image_size_names_choose', array(
-					'full'      => __('Full Size', 'image_widget'),
-					'thumbnail' => __('Thumbnail', 'image_widget'),
-					'medium'    => __('Medium', 'image_widget'),
-					'large'     => __('Large', 'image_widget'),
-				) );
-				$possible_sizes[self::CUSTOM_IMAGE_SIZE_SLUG] = __('Custom', 'image_widget');
-
-				foreach( $possible_sizes as $size_key => $size_label ) { ?>
+				<?php foreach( $this->possible_image_sizes() as $size_key => $size_label ) : ?>
 					<option value="<?php echo $size_key; ?>"<?php selected( $instance['size'], $size_key ); ?>><?php echo $size_label; ?></option>
-					<?php } ?>
+				<?php endforeach ?>
 			</select>
 		</p>
 	</div>

@@ -331,6 +331,27 @@ class Tribe_Image_Widget extends WP_Widget {
 	}
 
 	/**
+	 * Get all possible image sizes to choose from
+	 *
+	 * @return array
+	 */
+	private function possible_image_sizes() {
+		$registered = get_intermediate_image_sizes();
+		// label other sizes with their image size "ID"
+		$registered = array_combine( $registered, $registered );
+
+		$possible_sizes = array_merge( $registered, array(
+			'full'                       => __('Full Size', 'image_widget'),
+			'thumbnail'                  => __('Thumbnail', 'image_widget'),
+			'medium'                     => __('Medium', 'image_widget'),
+			'large'                      => __('Large', 'image_widget'),
+			self::CUSTOM_IMAGE_SIZE_SLUG => __('Custom', 'image_widget'),
+		) );
+
+		return (array) apply_filters( 'image_size_names_choose', $possible_sizes );
+	}
+
+	/**
 	 * Assesses the image size in case it has not been set or in case there is a mismatch.
 	 *
 	 * @param $instance

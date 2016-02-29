@@ -3,8 +3,8 @@ Contributors: ModernTribe, peterchester, borkweb, zbtirrell
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
 Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
-Tested up to: 4.4
-Stable tag: 4.2.1
+Tested up to: 4.4.2
+Stable tag: 4.2.2
 
 == Description ==
 
@@ -154,6 +154,10 @@ define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
 For more info on the philosophy here, check out our [blog post](http://tri.be/define-i-have-donated-true/)
 
 == Changelog ==
+
+= 4.2.2 =
+
+* Feature - Include registered image sizes in the list of selectable items (props to aaemnnosttv for the pull request!)
 
 = 4.2.1 =
 

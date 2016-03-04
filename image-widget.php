@@ -285,6 +285,14 @@ class Tribe_Image_Widget extends WP_Widget {
 				$instance['width'] = $image_details[1];
 				$instance['height'] = $image_details[2];
 			}
+			$image_srcset = wp_get_attachment_image_srcset( $instance['attachment_id'], $size);
+			if ( $image_srcset ) {
+				$instance['srcset'] = $image_srcset;
+			}
+			$image_sizes = wp_get_attachment_image_sizes( $instance['attachment_id'], $size );
+			if ( $image_sizes ) {
+				$instance['sizes'] = $image_sizes;
+			}
 		}
 		$instance['width'] = abs( $instance['width'] );
 		$instance['height'] = abs( $instance['height'] );
@@ -305,6 +313,12 @@ class Tribe_Image_Widget extends WP_Widget {
 		}
 		if (!empty($instance['align']) && $instance['align'] != 'none') {
 			$attr['class'] .= " align{$instance['align']}";
+		}
+		if (!empty($instance['srcset'])) {
+			$attr['srcset'] = $instance['srcset'];
+		}
+		if (!empty($instance['sizes'])) {
+			$attr['sizes'] = $instance['sizes'];
 		}
 		$attr = apply_filters( 'image_widget_image_attributes', $attr, $instance );
 

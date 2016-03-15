@@ -64,6 +64,19 @@ class Tribe_Image_Widget extends WP_Widget {
 		return !function_exists('wp_enqueue_media');
 	}
 
+	/* alt str_replace, first only
+    after http://stackoverflow.com/questions/1252693/using-str-replace-so-that-it-only-acts-on-the-first-match
+     */
+
+    private function str_replace_first($needle, $replace, $haystack) {
+        $pos = strpos($haystack, $needle);
+        if ($pos !== false) {
+            $haystack = substr_replace($haystack, $replace, $pos, strlen($needle));
+        }
+        return $haystack;
+    }
+
+
 	/**
 	 * Enqueue all the javascript.
 	 */
@@ -101,6 +114,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			$instance['align'] = apply_filters( 'image_widget_image_align', esc_attr( $instance['align'] ), $args, $instance );
 			$instance['alt'] = apply_filters( 'image_widget_image_alt', esc_attr( $instance['alt'] ), $args, $instance );
 			$instance['rel'] = apply_filters( 'image_widget_image_rel', esc_attr( $instance['rel'] ), $args, $instance );
+			$instance['classes'] = apply_filters( 'image_widget_image_classes', esc_attr( $instance['classes'] ), $args, $instance );
 
 			if ( !defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) {
 				$instance['attachment_id'] = ( $instance['attachment_id'] > 0 ) ? $instance['attachment_id'] : $instance['image'];
@@ -112,6 +126,15 @@ class Tribe_Image_Widget extends WP_Widget {
 			// No longer using extracted vars. This is here for backwards compatibility.
 			extract( $instance );
 
+			// wrap outer in a class, if required.
+			if ($instance['classes']) {
+	            if( strpos($before_widget, 'class') === false ) {
+	                $before_widget = $this->str_replace_first('>', 'class="'. $instance['classes'] . '"', $before_widget);
+	                
+	            } else {
+	                $before_widget = $this->str_replace_first('class="', 'class="'. $instance['classes'] . ' ', $before_widget);
+	            }
+            }
 			include( $this->getTemplateHierarchy( 'widget' ) );
 		}
 	}
@@ -144,6 +167,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		$instance['align'] = $new_instance['align'];
 		$instance['alt'] = $new_instance['alt'];
 		$instance['rel'] = $new_instance['rel'];
+		$instance['classes'] = $new_instance['classes'];
 
 		// Reverse compatibility with $image, now called $attachement_id
 		if ( !defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) && $new_instance['attachment_id'] > 0 ) {
@@ -229,6 +253,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			'align' => 'none',
 			'alt' => '',
 			'rel' => '',
+			'classes' => '',
 		);
 
 		if ( !defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) {

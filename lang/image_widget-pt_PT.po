@@ -2,86 +2,33 @@
 # This file is distributed under the same license as the the Image Widget package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-12-09 10:36+0000\n"
+"Project-Id-Version: Image Widget 4.1.2\n"
+"POT-Creation-Date: 2016-04-01 09:06+0100\n"
+"PO-Revision-Date: 2016-04-01 09:06+0100\n"
+"Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
+"Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
+"Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.6\n"
-"Project-Id-Version: Image Widget 4.1.2\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"POT-Creation-Date: \n"
-"Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
-"Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
-"Language: pt_PT\n"
 "X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: image-widget.php\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: views/widget-admin.deprecated.php:49 views/widget-admin.php:26
-msgid "Alternate Text"
-msgstr "Texto alternativo"
-
-#: views/widget-admin.deprecated.php:10 views/widget-admin.php:23
-msgid "Title"
-msgstr "Título"
-
-#: views/widget-admin.php:46
-msgid "Size"
-msgstr "Tamanho"
-
-#: views/widget-admin.php:56
-msgid "Custom"
-msgstr "Personalizado"
-
-#: views/widget-admin.deprecated.php:43 views/widget-admin.php:78
-msgid "none"
-msgstr "não"
-
-#. Author of the plugin/theme
-msgid "Modern Tribe, Inc."
-msgstr "Modern Tribe, Inc."
-
-#: views/widget-admin.deprecated.php:28 views/widget-admin.php:32
-msgid "Link"
-msgstr "Ligação"
-
-#: views/widget-admin.deprecated.php:25 views/widget-admin.php:29
-msgid "Caption"
-msgstr "Legenda"
-
-#: views/widget-admin.deprecated.php:35 views/widget-admin.php:68
-msgid "Width"
-msgstr "Largura"
-
-#: views/widget-admin.deprecated.php:13
-msgid "Image"
-msgstr "Imagem"
+#: image-widget.php:38
+msgid "Showcase a single image with a Title, URL, and a Description"
+msgstr "Mostrar uma imagem com título, URL e descrição"
 
 #. Plugin Name of the plugin/theme
 #: image-widget.php:40
 msgid "Image Widget"
 msgstr "Widget de imagem"
-
-#. Plugin URI of the plugin/theme
-msgid "http://wordpress.org/extend/plugins/image-widget/"
-msgstr "http://wordpress.org/extend/plugins/image-widget/"
-
-#. Author URI of the plugin/theme
-msgid "http://m.tri.be/26"
-msgstr "http://m.tri.be/26"
-
-#: views/widget-admin.deprecated.php:38 views/widget-admin.php:71
-msgid "Height"
-msgstr "Altura"
-
-#: views/widget-admin.deprecated.php:17
-msgid "Add Image"
-msgstr "Adicionar imagem"
-
-#: image-widget.php:38
-msgid "Showcase a single image with a Title, URL, and a Description"
-msgstr "Mostrar uma imagem com título, URL e descrição"
 
 #: image-widget.php:75 views/widget-admin.php:13
 msgid "Select an Image"
@@ -91,62 +38,150 @@ msgstr "Seleccione uma imagem"
 msgid "Insert Into Widget"
 msgstr "Inserir no widget"
 
-#: image-widget.php:400
-msgid "Thanks for upgrading the Image Widget! If you like this plugin, please consider <a href=\"%s\" target=\"_blank\">rating it</a> and maybe even check out our premium plugins including our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
-msgstr "Obrigado por actualizar o Image Widget! Se gostar deste plugin, por favor considere <a href=\"%s\" target=\"_blank\">cassificá-lo</a>, talvez também queira ver os nossos plugins premium, incluindo o nosso <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+#: image-widget.php:344
+msgid "Full Size"
+msgstr "Tamanho original"
 
-#: image-widget.php:415
-msgid "Check out our other <a href=\"%s\" target=\"_blank\">plugins</a> including our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
-msgstr "Veja os nossos outros <a href=\"%s\" target=\"_blank\">plugins</a> incluindo o nosso <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+#: image-widget.php:345
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: image-widget.php:346
+msgid "Medium"
+msgstr "Médio"
+
+#: image-widget.php:347
+msgid "Large"
+msgstr "Grande"
+
+#: image-widget.php:348
+msgid "Custom"
+msgstr "Personalizado"
+
+#: image-widget.php:425
+#, php-format
+msgid ""
+"Thanks for upgrading the Image Widget! If you like this plugin, please "
+"consider <a href=\"%s\" target=\"_blank\">rating it</a> and maybe even check "
+"out our premium plugins including our <a href=\"%s\" target=\"_blank"
+"\">Events Calendar Pro</a>!"
+msgstr ""
+"Obrigado por actualizar o Image Widget! Se gostar deste plugin, por favor "
+"considere <a href=\"%s\" target=\"_blank\">cassificá-lo</a>, talvez também "
+"queira ver os nossos plugins premium, incluindo o nosso <a href=\"%s\" "
+"target=\"_blank\">Events Calendar Pro</a>!"
+
+#: image-widget.php:440
+#, php-format
+msgid ""
+"Check out our other <a href=\"%s\" target=\"_blank\">plugins</a> including "
+"our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+msgstr ""
+"Veja os nossos outros <a href=\"%s\" target=\"_blank\">plugins</a> incluindo "
+"o nosso <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+
+#: views/widget-admin.deprecated.php:10 views/widget-admin.php:23
+msgid "Title"
+msgstr "Título"
+
+#: views/widget-admin.deprecated.php:13
+msgid "Image"
+msgstr "Imagem"
 
 #: views/widget-admin.deprecated.php:17
 msgid "Change Image"
 msgstr "Alterar imagem"
 
-#: views/widget-admin.deprecated.php:31 views/widget-admin.php:37
+#: views/widget-admin.deprecated.php:17
+msgid "Add Image"
+msgstr "Adicionar imagem"
+
+#: views/widget-admin.deprecated.php:25 views/widget-admin.php:33
+msgid "Caption"
+msgstr "Legenda"
+
+#: views/widget-admin.deprecated.php:28 views/widget-admin.php:36
+msgid "Link"
+msgstr "Ligação"
+
+#: views/widget-admin.deprecated.php:31 views/widget-admin.php:41
 msgid "Stay in Window"
 msgstr "Manter nesta janela"
 
-#: views/widget-admin.deprecated.php:32 views/widget-admin.php:38
+#: views/widget-admin.deprecated.php:32 views/widget-admin.php:42
 msgid "Open New Window"
 msgstr "Abrir numa nova janela"
 
-#: views/widget-admin.deprecated.php:41 views/widget-admin.php:76
+#: views/widget-admin.deprecated.php:35 views/widget-admin.php:62
+msgid "Width"
+msgstr "Largura"
+
+#: views/widget-admin.deprecated.php:38 views/widget-admin.php:65
+msgid "Height"
+msgstr "Altura"
+
+#: views/widget-admin.deprecated.php:41 views/widget-admin.php:70
 msgid "Align"
 msgstr "Alinhar"
 
-#: views/widget-admin.deprecated.php:44 views/widget-admin.php:79
+#: views/widget-admin.deprecated.php:43 views/widget-admin.php:72
+msgid "none"
+msgstr "não"
+
+#: views/widget-admin.deprecated.php:44 views/widget-admin.php:73
 msgid "left"
 msgstr "esquerda"
 
-#: views/widget-admin.deprecated.php:45 views/widget-admin.php:80
+#: views/widget-admin.deprecated.php:45 views/widget-admin.php:74
 msgid "center"
 msgstr "centro"
 
-#: views/widget-admin.deprecated.php:46 views/widget-admin.php:81
+#: views/widget-admin.deprecated.php:46 views/widget-admin.php:75
 msgid "right"
 msgstr "direita"
 
-#: views/widget-admin.php:34
+#: views/widget-admin.deprecated.php:49 views/widget-admin.php:26
+msgid "Alternate Text"
+msgstr "Texto alternativo"
+
+#: views/widget-admin.php:29
+msgid "Related"
+msgstr "Relacionado"
+
+#: views/widget-admin.php:31
+msgid ""
+"A recommended HTML5 related terms list is availlable <a href=\"http://"
+"microformats.org/wiki/existing-rel-values#HTML5_link_type_extensions\" "
+"target=\"_blank\">here</a>."
+msgstr ""
+"Uma lista de termos relacionados com HTML5 está disponível <a href=\"http://"
+"microformats.org/wiki/existing-rel-values#HTML5_link_type_extensions\" "
+"target=\"_blank\">aqui</a>."
+
+#: views/widget-admin.php:38
 msgid "Link ID"
 msgstr "ID da ligação"
 
-#: views/widget-admin.php:51
-msgid "Full Size"
-msgstr "Tamanho original"
+#: views/widget-admin.php:50
+msgid "Size"
+msgstr "Tamanho"
 
-#: views/widget-admin.php:52
-msgid "Thumbnail"
-msgstr "Miniatura"
-
-#: views/widget-admin.php:53
-msgid "Medium"
-msgstr "Médio"
-
-#: views/widget-admin.php:54
-msgid "Large"
-msgstr "Grande"
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/image-widget/"
+msgstr "http://wordpress.org/extend/plugins/image-widget/"
 
 #. Description of the plugin/theme
-msgid "A simple image widget that uses the native WordPress media manager to add image widgets to your site."
-msgstr "Um widget simples de imagem que utiliza o gestor de multimédia nativo do WordPress para adicionar widgets de imagem ao seu site."
+msgid ""
+"A simple image widget that uses the native WordPress media manager to add "
+"image widgets to your site."
+msgstr ""
+"Um widget simples de imagem que utiliza o gestor de multimédia nativo do "
+"WordPress para adicionar widgets de imagem ao seu site."
+
+#. Author of the plugin/theme
+msgid "Modern Tribe, Inc."
+msgstr "Modern Tribe, Inc."
+
+#. Author URI of the plugin/theme
+msgid "http://m.tri.be/26"
+msgstr "http://m.tri.be/26"

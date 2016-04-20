@@ -74,4 +74,9 @@ if ( !defined('ABSPATH') )
 		<option value="center"<?php selected( $instance['align'], 'center' ); ?>><?php _e('center', 'image_widget'); ?></option>
 		<option value="right"<?php selected( $instance['align'], 'right' ); ?>><?php _e('right', 'image_widget'); ?></option>
 	</select></p>
+
+
+	<p><label for="<?php echo $this->get_field_id('classes'); ?>"><?php _e('CSS classes', 'image_widget'); ?>:</label>
+		<input class="widefat" id="<?php echo $this->get_field_id('classes'); ?>" name="<?php echo $this->get_field_name('classes'); ?>" type="text" value="<?php echo esc_attr(strip_tags($instance['classes'])); ?>" /></p>
+
 </div>

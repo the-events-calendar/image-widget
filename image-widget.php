@@ -423,7 +423,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		$version_key = '_image_widget_version';
 		if ( get_site_option( $version_key ) == self::VERSION ) return;
 
-		$msg = sprintf( __( 'Thanks for upgrading the Image Widget! If you like this plugin, please consider <a href="%s" target="_blank">rating it</a> and maybe even check out our premium plugins including our <a href="%s" target="_blank">Events Calendar Pro</a>!', 'image-widget' ), 'http://wordpress.org/plugins/image-widget/?source=image-widget&pos=nag', 'https://theeventscalendar.com/product/wordpress-events-calendar-pro/?source=image-widget&pos=nag' );
+		$msg = sprintf( __( 'Thanks for using the Image Widget! If you like this plugin, please consider <a href="%s" target="_blank">rating it</a> and maybe even check out our premium plugins including our <a href="%s" target="_blank">Events Calendar Pro</a>!', 'image-widget' ), 'http://wordpress.org/plugins/image-widget/?source=image-widget&pos=nag', 'https://theeventscalendar.com/product/wordpress-events-calendar-pro/?source=image-widget&pos=nag' );
 		echo "<div class='update-nag'>$msg</div>";
 
 		update_site_option( $version_key, self::VERSION );

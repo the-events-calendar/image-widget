@@ -63,7 +63,7 @@ class ImageWidgetDeprecated {
 	function replace_text_in_thickbox($translated_text, $source_text, $domain) {
 		if ( $this->is_sp_widget_context() ) {
 			if ('Insert into Post' == $source_text) {
-				return __('Insert Into Widget', 'image_widget' );
+				return __('Insert Into Widget', 'image-widget' );
 			}
 		}
 		return $translated_text;

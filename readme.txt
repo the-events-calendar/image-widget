@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 4.4.2
-Stable tag: 4.2.2
+Stable tag: 4.3
 
 == Description ==
 
@@ -19,15 +19,13 @@ A simple image widget that uses the native WordPress media manager to add image 
 * Supports override of template so that you can override the template for your theme!
 * Responsive
 
-This plugin is actively supported and we will do our best to help you. In return we simply as 3 things:
+This plugin is actively supported and we will do our best to help you. In return we simply ask 3 things:
 
 1. Help Out. If you see a question on the forum you can help with or have a great idea and want to code it up and submit a patch, that would be just plain awesome and we will shower your with praise. Might even be a good way to get to know us and lead to some paid work if you freelance.  Also, we are happy to post translations if you provide them.
 1. [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6) - if this is generating enough revenue to support our time it makes all the difference in the world.
-1. Support us by buying our Premium plugins. In particular, check out [Events Calendar Pro](https://theeventscalendar.com/product/wordpress-events-calendar-pro/?src=imagewidget) and [Event Tickets Plus](https://theeventscalendar.com/product/wordpress-event-tickets-plus/?src=imagewidget).
+1. Support us by buying our Premium plugins. In particular, *check out [Events Calendar Pro](https://theeventscalendar.com/product/wordpress-events-calendar-pro/?src=imagewidget) and [Event Tickets Plus](https://theeventscalendar.com/product/wordpress-event-tickets-plus/?src=imagewidget)*.
 
-Note, we're also on github in case you want to add some pull requests or a fork!
-
-https://github.com/moderntribe/image-widget
+[Check us out on GitHub](https://github.com/moderntribe/image-widget) in case you want to add some pull requests or a fork!
 
 == Installation ==
 
@@ -38,14 +36,24 @@ https://github.com/moderntribe/image-widget
    in your Manage menu.
 1. Go to the Appearance > Widget page and place the widget in your sidebar in the Design
 
-If you find any bugs or have any ideas, please mail us.
-
-Please visit the forum for questions or comments: http://wordpress.org/tags/image-widget/
+If you find any bugs or have any ideas, please [visit the forum for questions or comments](http://wordpress.org/support/plugin/image-widget/)
 
 = Requirements =
 
-* PHP 5.1 or above
+* PHP 5.2 or above
 * WordPress 3.5 or above
+
+== Screenshots ==
+
+1. Image Widget admin screen.
+1. Media manager integration.
+1. Image Widget on the front of a plain WordPress install.
+
+== Frequently Asked Questions ==
+
+= Where do I go to file a bug or ask a question? =
+
+Please [visit the forum for questions or comments](http://wordpress.org/support/plugin/image-widget/)
 
 == Documentation ==
 
@@ -154,6 +162,13 @@ define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
 For more info on the philosophy here, check out our [blog post](http://tri.be/define-i-have-donated-true/)
 
 == Changelog ==
+
+= 4.3 =
+
+* Translations - fixed compatibility with translate.wordpress.org
+* Translations - restored the pot file for easier community translations
+* Tweak - fixed a typo
+* Tweak - Minor code cleanup
 
 = 4.2.2 =
 
@@ -447,14 +462,3 @@ Also, several languages will no longer be supported until new translations are s
 
 http://wordpress.org/support/topic/image-widget-40-translations-needed-2
 
-== Screenshots ==
-
-1. Image Widget admin screen.
-1. Media manager integration.
-1. Image Widget on the front of a plain Wordpress install.
-
-== Frequently Asked Questions ==
-
-= Where do I go to file a bug or ask a question? =
-
-Please visit the forum for questions or comments: http://wordpress.org/tags/image-widget/

@@ -1,0 +1,175 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Image Widget\n"
+"POT-Creation-Date: 2017-02-09 22:07-0500\n"
+"PO-Revision-Date: 2017-02-09 22:06-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: image-widget.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: image-widget.php:40
+msgid "Showcase a single image with a Title, URL, and a Description"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: image-widget.php:42
+msgid "Image Widget"
+msgstr ""
+
+#: image-widget.php:77 views/widget-admin.php:13
+msgid "Select an Image"
+msgstr ""
+
+#: image-widget.php:78 lib/ImageWidgetDeprecated.php:66
+msgid "Insert Into Widget"
+msgstr ""
+
+#: image-widget.php:346
+msgid "Full Size"
+msgstr ""
+
+#: image-widget.php:347
+msgid "Thumbnail"
+msgstr ""
+
+#: image-widget.php:348
+msgid "Medium"
+msgstr ""
+
+#: image-widget.php:349
+msgid "Large"
+msgstr ""
+
+#: image-widget.php:350
+msgid "Custom"
+msgstr ""
+
+#: image-widget.php:426
+#, php-format
+msgid ""
+"Thanks for upgrading the Image Widget! If you like this plugin, please "
+"consider <a href=\"%s\" target=\"_blank\">rating it</a> and maybe even check "
+"out our premium plugins including our <a href=\"%s\" target=\"_blank"
+"\">Events Calendar Pro</a>!"
+msgstr ""
+
+#: image-widget.php:441
+#, php-format
+msgid ""
+"Check out our other <a href=\"%s\" target=\"_blank\">plugins</a> including "
+"our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:10 views/widget-admin.php:23
+msgid "Title"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:13
+msgid "Image"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:17
+msgid "Change Image"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:17
+msgid "Add Image"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:25 views/widget-admin.php:33
+msgid "Caption"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:28 views/widget-admin.php:36
+msgid "Link"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:31 views/widget-admin.php:41
+msgid "Stay in Window"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:32 views/widget-admin.php:42
+msgid "Open New Window"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:35 views/widget-admin.php:61
+msgid "Width"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:38 views/widget-admin.php:64
+msgid "Height"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:41 views/widget-admin.php:69
+msgid "Align"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:43 views/widget-admin.php:71
+msgid "none"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:44 views/widget-admin.php:72
+msgid "left"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:45 views/widget-admin.php:73
+msgid "center"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:46 views/widget-admin.php:74
+msgid "right"
+msgstr ""
+
+#: views/widget-admin.deprecated.php:49 views/widget-admin.php:26
+msgid "Alternate Text"
+msgstr ""
+
+#: views/widget-admin.php:29
+msgid "Related"
+msgstr ""
+
+#: views/widget-admin.php:31
+msgid ""
+"A recommended HTML5 related terms list is available <a href=\"http://"
+"microformats.org/wiki/existing-rel-values#HTML5_link_type_extensions\" "
+"target=\"_blank\">here</a>."
+msgstr ""
+
+#: views/widget-admin.php:38
+msgid "Link ID"
+msgstr ""
+
+#: views/widget-admin.php:49
+msgid "Size"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/image-widget/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A simple image widget that uses the native WordPress media manager to add "
+"image widgets to your site."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Modern Tribe, Inc."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://m.tri.be/26"
+msgstr ""

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 4.4.2
-Stable tag: 4.2.2
+Stable tag: 4.3
 
 == Description ==
 
@@ -154,6 +154,13 @@ define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
 For more info on the philosophy here, check out our [blog post](http://tri.be/define-i-have-donated-true/)
 
 == Changelog ==
+
+= 4.3 =
+
+* Translations - fixed compatibility with translate.wordpress.org
+* Translations - restored the pot file for easier community translations
+* Tweak - fixed a typo
+* Tweak - Minor code cleanup
 
 = 4.2.2 =
 

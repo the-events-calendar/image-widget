@@ -449,8 +449,8 @@ class Tribe_Image_Widget extends WP_Widget {
 		// Assemble the "thank you" notice.
 		$msg = sprintf(
 			esc_html__( 'Thanks for using the Image Widget! If you like this plugin, please consider %1$srating it%3$s. And be sure to check out our premium plugins, like %2$sEvents Calendar Pro%3$s!', 'image-widget' ),
-			'<a href="http://wordpress.org/plugins/image-widget/?source=image-widget&pos=nag" target="_blank">',
-			'<a href="https://theeventscalendar.com/product/wordpress-events-calendar-pro/?source=image-widget&pos=nag" target="_blank">',
+			'<a href="https://wordpress.org/support/plugin/image-widget/reviews/?filter=5" target="_blank">',
+			'<a href="http://m.tri.be/19l-" target="_blank">',
 			'</a>'
 		);
 

@@ -15,10 +15,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-// Load the widget on widgets_init
+/**
+ * Activate Image Widget Plus so long as Image Widget is not also activated.
+ */
+function tribe_image_maybe_activate( ) {
+
+	if ( class_exists( 'Tribe_Image_Widget_Plus' ) ) {
+
+		deactivate_plugins( basename( __FILE__ ) );
+
+		$mopath = trailingslashit( basename( dirname( __FILE__ ) ) ) . 'lang/';
+
+		load_plugin_textdomain( 'image-widget', false, $mopath );
+
+		esc_html_e( 'If you want to use the free version of the Image Widget, please deactivate Image Widget Plus.', 'image-widget' );
+		die;
+	}
+}
+
+register_activation_hook( __FILE__, 'tribe_image_maybe_activate' );
+
+/**
+ * Load the widget on widgets_init
+ */
 function tribe_load_image_widget() {
 	register_widget( 'Tribe_Image_Widget' );
 }
+
 add_action( 'widgets_init', 'tribe_load_image_widget' );
 
 /**

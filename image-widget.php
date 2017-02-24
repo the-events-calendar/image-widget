@@ -423,9 +423,16 @@ class Tribe_Image_Widget extends WP_Widget {
 		$version_key = '_image_widget_version';
 		if ( get_site_option( $version_key ) == self::VERSION ) return;
 
-		$msg = sprintf( __( 'Thanks for using the Image Widget! If you like this plugin, please consider <a href="%s" target="_blank">rating it</a>. And be sure to check out our premium plugins, including <a href="%s" target="_blank">Events Calendar Pro</a>!', 'image-widget' ), 'http://wordpress.org/plugins/image-widget/?source=image-widget&pos=nag', 'https://theeventscalendar.com/product/wordpress-events-calendar-pro/?source=image-widget&pos=nag' );
+		// Assemble the "thank you" notice.
+		$msg = sprintf(
+			esc_html__( 'Thanks for using the Image Widget! If you like this plugin, please consider %1$srating it%3$s. And be sure to check out our premium plugins, like %2$sEvents Calendar Pro%3$s!', 'image-widget' ),
+			'<a href="http://wordpress.org/plugins/image-widget/?source=image-widget&pos=nag" target="_blank">',
+			'<a href="https://theeventscalendar.com/product/wordpress-events-calendar-pro/?source=image-widget&pos=nag" target="_blank">',
+			'</a>'
+		);
 
-		echo wp_kses_post( sprintf( '<div class="update-nag">%s</div>', $msg ) );
+		// The message has been escaped above.
+		echo "<div class='update-nag'>$msg</div>";
 
 		update_site_option( $version_key, self::VERSION );
 	}

@@ -28,16 +28,16 @@ $id_prefix = $this->get_field_id( '' );
 
 	<p><label for="<?php echo esc_attr( $this->get_field_id( 'rel' ) ); ?>"><?php esc_html_e( 'Related', 'image-widget' ); ?>:</label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'rel' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'rel' ) ); ?>" type="text" value="<?php echo esc_attr( strip_tags( $instance['rel'] ) ); ?>" /><br>
+		<span class="description">
 		<?php
-		// Description text for the "Related" field.
-		$related_description = sprintf(
-			esc_html__( 'A recommended HTML5 related terms list is available %1$shere%2$s.', 'image-widget' ),
-			'<a href="http://microformats.org/wiki/existing-rel-values#HTML5_link_type_extensions" target="_blank">',
-			'</a>'
-		);
-
-		// The output has been properly escaped above.
-		echo "<span class='description'> $related_description </span>"; ?>
+			// Description text for the "Related" field.
+			printf(
+				esc_html__( 'A recommended HTML5 related terms list is available %1$shere%2$s.', 'image-widget' ),
+				'<a href="http://microformats.org/wiki/existing-rel-values#HTML5_link_type_extensions" target="_blank">',
+				'</a>'
+			);
+		?>
+		</span>
 	</p>
 
 	<p><label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php esc_html_e( 'Caption', 'image-widget' ); ?>:</label>

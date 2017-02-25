@@ -163,6 +163,11 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
+= 4.x — Release Date TB =
+
+* Tweak — Fixed some strings that weren't properly escaped.
+* Tweak — Added activation check and some code related to the new Image Widget Plus plugin.
+
 = 4.3 =
 
 * Translations - fixed compatibility with translate.wordpress.org

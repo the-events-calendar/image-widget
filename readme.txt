@@ -1,5 +1,5 @@
 === Image Widget ===
-Contributors: ModernTribe, peterchester, borkweb, zbtirrell
+Contributors: ModernTribe, peterchester, borkweb, zbtirrell, ggwicz
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
 Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
@@ -167,6 +167,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 * Tweak — Fixed some strings that weren't properly escaped.
 * Tweak — Added activation check and some code related to the new Image Widget Plus plugin.
+* Removed the `related` field and option from the plugin.
 
 = 4.3 =
 

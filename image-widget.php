@@ -4,8 +4,8 @@ Plugin Name: Image Widget
 Plugin URI: http://wordpress.org/plugins/image-widget/
 Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong>COMMING SOON: <a href="http://theeventscalendar.org/products/image-widget-plus/?utm_campaign=in-app&utm_source=docblock&utm_medium=image-widget">Image Widget Plus</a> - Multiple images, slider and more.</strong>
 Author: Modern Tribe, Inc.
-Version: 4.3
 Author URI: http://m.tri.be/26
+Version: 4.3.1
 Text Domain: image-widget
 Domain Path: /lang
 */

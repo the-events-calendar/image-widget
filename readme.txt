@@ -19,11 +19,13 @@ A simple image widget that uses the native WordPress media manager to add image 
 * Supports override of template so that you can override the template for your theme!
 * Responsive
 
+*For more features including support for multiple images, check out our upcoming [Image Widget Plus!](http://m.tri.be/19m8)*
+
 This plugin is actively supported and we will do our best to help you. In return we simply ask 3 things:
 
 1. Help Out. If you see a question on the forum you can help with or have a great idea and want to code it up and submit a patch, that would be just plain awesome and we will shower your with praise. Might even be a good way to get to know us and lead to some paid work if you freelance.  Also, we are happy to post translations if you provide them.
 1. [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6) - if this is generating enough revenue to support our time it makes all the difference in the world.
-1. Support us by buying our Premium plugins. In particular, *check out [Events Calendar Pro](https://theeventscalendar.com/product/wordpress-events-calendar-pro/?src=imagewidget) and [Event Tickets Plus](https://theeventscalendar.com/product/wordpress-event-tickets-plus/?src=imagewidget)*.
+1. Support us by buying our Premium plugins. In particular, *check out our upcoming [Image Widget Plus!](http://m.tri.be/19m8) or our well established [Events Calendar Pro](https://theeventscalendar.com/product/wordpress-events-calendar-pro/?src=imagewidget) or [Event Tickets Plus](https://theeventscalendar.com/product/wordpress-event-tickets-plus/?src=imagewidget)*.
 
 [Check us out on GitHub](https://github.com/moderntribe/image-widget) in case you want to add some pull requests or a fork!
 
@@ -162,6 +164,10 @@ define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
 For more info on the philosophy here, check out our [blog post](http://tri.be/define-i-have-donated-true/)
 
 == Changelog ==
+
+= 4.3.1 =
+
+* Upgrade admin notice code.
 
 = 4.3 =
 

@@ -29,6 +29,8 @@ class Tribe_Image_Widget extends WP_Widget {
 	const VERSION = '4.3.1';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
+	
+	const VERSION_KEY = '_image_widget_version';
 
 	/**
 	 * Tribe Image Widget constructor
@@ -55,6 +57,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			add_action( 'admin_notices', array( $this, 'post_upgrade_nag' ) );
 
 		add_action( 'network_admin_notices', array( $this, 'post_upgrade_nag' ) );
+		add_action( 'wp_ajax_dismissed_image_widget_notice_handler',  array( $this, 'ajax_notice_handler' ) );
 	}
 
 	/**
@@ -419,14 +422,43 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	public function post_upgrade_nag() {
 		if ( ! current_user_can( 'install_plugins' ) ) return;
+		
+		global $pagenow;
+		$whitelist = array( 'plugins.php', 'widgets.php' );
+		if ( !in_array( $pagenow, $whitelist ) ) return;
 
-		$version_key = '_image_widget_version';
-		if ( get_site_option( $version_key ) == self::VERSION ) return;
+		if ( get_site_option( self::VERSION_KEY ) == self::VERSION ) return;
 
-		$msg = sprintf( __( 'Thanks for using the Image Widget! If you like this plugin, please consider <a href="%s" target="_blank">rating it</a> and maybe even check out our premium plugins including our <a href="%s" target="_blank">Events Calendar Pro</a>!', 'image-widget' ), 'http://wordpress.org/plugins/image-widget/?source=image-widget&pos=nag', 'https://theeventscalendar.com/product/wordpress-events-calendar-pro/?source=image-widget&pos=nag' );
-		echo "<div class='update-nag'>$msg</div>";
+		$msg = sprintf( __( '<p>Thanks for using the Image Widget! FYI, the Image Widget Plus is coming soon, including a slider, lightbox and random images!</p><p><strong><a href="%s">Read more about the new Image Widget Plus!</a></strong></p>', 'image-widget' ), 'http://theeventscalendar.org/products/image-widget-plus/?utm_campaign=in-app&utm_source=nag&utm_medium=image-widget' );
+		echo "<div class='notice notice-info is-dismissible image-widget-notice' data-key='".self::VERSION."'>$msg</div>";
+		
+		?><script>
+		jQuery(document).ready(function($){
+			// Dismiss our admin notice
+			$( document ).on( 'click', '.image-widget-notice .notice-dismiss', function () {
+				console.log('test');
+				var key = $( this ).closest( '.image-widget-notice' ).data( 'key' );
+				console.log(key);
+				$.ajax( ajaxurl,
+				{
+					type: 'POST',
+					data: {
+						action: 'dismissed_image_widget_notice_handler',
+						key: key,
+					}
+				} );
+			} );
+		} );
+		</script><?php
+	}
 
-		update_site_option( $version_key, self::VERSION );
+	/**
+	 * AJAX handler to store the state of dismissible notices.
+	 */
+	function ajax_notice_handler() {
+		if ( empty( $_POST['key'] ) ) return;
+		$version = sanitize_text_field( $_POST['key'] );
+		update_site_option( self::VERSION_KEY, $version );
 	}
 
 	/**

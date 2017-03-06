@@ -26,7 +26,7 @@ add_action( 'widgets_init', 'tribe_load_image_widget' );
  **/
 class Tribe_Image_Widget extends WP_Widget {
 
-	const VERSION = '4.3';
+	const VERSION = '4.3.1';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
 

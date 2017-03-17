@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 4.4.2
-Stable tag: 4.3
+Stable tag: 4.3.1
 
 A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 
@@ -62,7 +62,7 @@ Getting started with Image Widget is a breeze!
 1. Download and install the Image Widget plugin
 1. From your WordPress admin screen, select Plugins from the menu
 1. Activate the Image Widget plugin
-1. Go to Appearance > Widget to place the widget in your sidebar in the Design
+1. Go to Appearance > Widget to place the widget
 
 If you run into any questions or have suggestions, please visit the forum to post questions or comments.
 

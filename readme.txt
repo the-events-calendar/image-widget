@@ -47,8 +47,6 @@ Image Widget Plus features include:
 
 = Pull Requests & Translations =
 
- to add your pull requests, translations, or a fork. Translations can also be submitted in [our forum here on WordPress.org](https://wordpress.org/support/plugin/image-widget/).
-
 [Check us out on GitHub](https://github.com/moderntribe/image-widget) to pull request changes.
 
 Translations can be submitted [here on WordPress.org](https://translate.wordpress.org/projects/wp-plugins/image-widget).
@@ -208,6 +206,10 @@ define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
 For more info on the philosophy here, check out our [blog post](http://tri.be/define-i-have-donated-true/)
 
 == Changelog ==
+
+= 4.3.1 =
+
+* Tweak - adjusted promotional text
 
 = 4.3 =
 

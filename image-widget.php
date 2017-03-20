@@ -427,11 +427,11 @@ class Tribe_Image_Widget extends WP_Widget {
 		<div class="update-nag">
 			<?php esc_html_e( 'Thanks for using the Image Widget by Modern Tribe! If you like these features, you\'ll love what we\'re working on next.', 'image-widget' );?>
 			<br>
-			<?php echo sprintf(
+			<?php printf(
 				esc_html__( 'Check out the new %1$sImage Widget Plus%2$s!', 'image-widget' ),
 				'<a href="http://m.tri.be/19mb" target="_blank">',
 				'</a>'
-			);?>
+			); ?>
 		</div>
 		<?php
 
@@ -447,7 +447,7 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	public function plugin_row_meta( $meta, $file ) {
 		if ( $file == plugin_basename( dirname( __FILE__ ) . '/image-widget.php' ) ) {
-			$meta[] = '<strong>Coming Soon:</strong> <a href="http://m.tri.be/19ma" target="_blank">' . __( 'Image Widget Plus', 'image-widget' ) . '</a>';
+			$meta[] = '<strong>' . esc_html__( 'Coming Soon:', 'image-widget' ) . '</strong> <a href="http://m.tri.be/19ma" target="_blank">' . esc_html__( 'Image Widget Plus', 'image-widget' ) . '</a>';
 		}
 		return $meta;
 	}

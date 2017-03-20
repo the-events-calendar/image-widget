@@ -4,7 +4,7 @@ Plugin Name: Image Widget
 Plugin URI: http://wordpress.org/plugins/image-widget/
 Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 Author: Modern Tribe, Inc.
-Version: 4.3
+Version: 4.3.1
 Author URI: http://m.tri.be/26
 Text Domain: image-widget
 Domain Path: /lang
@@ -423,8 +423,17 @@ class Tribe_Image_Widget extends WP_Widget {
 		$version_key = '_image_widget_version';
 		if ( get_site_option( $version_key ) == self::VERSION ) return;
 
-		$msg = sprintf( __( 'Thanks for using the Image Widget! If you like this plugin, please consider <a href="%s" target="_blank">rating it</a> and maybe even check out our premium plugins including our <a href="%s" target="_blank">Events Calendar Pro</a>!', 'image-widget' ), 'http://wordpress.org/plugins/image-widget/?source=image-widget&pos=nag', 'https://theeventscalendar.com/product/wordpress-events-calendar-pro/?source=image-widget&pos=nag' );
-		echo "<div class='update-nag'>$msg</div>";
+		?>
+		<div class="update-nag">
+			<?php esc_html_e( 'Thanks for using the Image Widget by Modern Tribe! If you like these features, you\'ll love what we\'re working on next.', 'image-widget' );?>
+			<br>
+			<?php printf(
+				esc_html__( 'Check out the new %1$sImage Widget Plus%2$s!', 'image-widget' ),
+				'<a href="http://m.tri.be/19mb" target="_blank">',
+				'</a>'
+			); ?>
+		</div>
+		<?php
 
 		update_site_option( $version_key, self::VERSION );
 	}
@@ -438,7 +447,7 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	public function plugin_row_meta( $meta, $file ) {
 		if ( $file == plugin_basename( dirname( __FILE__ ) . '/image-widget.php' ) ) {
-			$meta[] = '<span class="tribe-test">' . sprintf( __( 'Check out our other <a href="%s" target="_blank">plugins</a> including our <a href="%s" target="_blank">Events Calendar Pro</a>!', 'image-widget' ), 'https://theeventscalendar.com/products/?source=image-widget&pos=pluginlist', 'https://theeventscalendar.com/product/wordpress-events-calendar-pro/?source=image-widget&pos=pluginlist' ) . '</span>';
+			$meta[] = '<strong>' . esc_html__( 'Coming Soon:', 'image-widget' ) . '</strong> <a href="http://m.tri.be/19ma" target="_blank">' . esc_html__( 'Image Widget Plus', 'image-widget' ) . '</a>';
 		}
 		return $meta;
 	}

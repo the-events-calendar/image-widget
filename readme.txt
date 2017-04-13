@@ -216,7 +216,8 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 = 4.3.1 =
 
-* Upgrade admin notice code.
+* Feature - Add srcset and size attribute support (props @philwp) 
+* Tweak - Upgrade admin notice code
 
 = 4.3 =
 

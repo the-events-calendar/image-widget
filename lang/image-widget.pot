@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Image Widget\n"
-"POT-Creation-Date: 2017-02-09 22:07-0500\n"
-"PO-Revision-Date: 2017-02-09 22:06-0500\n"
+"POT-Creation-Date: 2017-03-20 08:23-0400\n"
+"PO-Revision-Date: 2017-03-17 17:01-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -57,20 +57,23 @@ msgstr ""
 msgid "Custom"
 msgstr ""
 
-#: image-widget.php:426
-#, php-format
+#: image-widget.php:428
 msgid ""
-"Thanks for upgrading the Image Widget! If you like this plugin, please "
-"consider <a href=\"%s\" target=\"_blank\">rating it</a> and maybe even check "
-"out our premium plugins including our <a href=\"%s\" target=\"_blank"
-"\">Events Calendar Pro</a>!"
+"Thanks for using the Image Widget by Modern Tribe! If you like these "
+"features, you'll love what we're working on next."
 msgstr ""
 
-#: image-widget.php:441
+#: image-widget.php:431
 #, php-format
-msgid ""
-"Check out our other <a href=\"%s\" target=\"_blank\">plugins</a> including "
-"our <a href=\"%s\" target=\"_blank\">Events Calendar Pro</a>!"
+msgid "Check out the new %1$sImage Widget Plus%2$s!"
+msgstr ""
+
+#: image-widget.php:450
+msgid "Coming Soon:"
+msgstr ""
+
+#: image-widget.php:450
+msgid "Image Widget Plus"
 msgstr ""
 
 #: views/widget-admin.deprecated.php:10 views/widget-admin.php:23

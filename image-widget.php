@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/plugins/image-widget/
 Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong>COMING SOON: <a href="http://theeventscalendar.org/products/image-widget-plus/?utm_campaign=in-app&utm_source=docblock&utm_medium=image-widget">Image Widget Plus</a> - Multiple images, slider and more.</strong>
 Author: Modern Tribe, Inc.
 Version: 4.3.1
-Author URI: http://theeventscalendar.org/products/image-widget-plus/?utm_campaign=in-app&utm_source=docblock&utm_medium=image-widget
+Author URI: http://m.tri.be/iwpdoc
 Text Domain: image-widget
 Domain Path: /lang
 */
@@ -470,7 +470,7 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	public function plugin_row_meta( $meta, $file ) {
 		if ( $file == plugin_basename( dirname( __FILE__ ) . '/image-widget.php' ) ) {
-			$meta[] = '<span class="tribe-test">' . sprintf( __( 'Check out our other <a href="%s" target="_blank">plugins</a> including our <a href="%s" target="_blank">Events Calendar Pro</a>!', 'image-widget' ), 'https://theeventscalendar.com/products/?source=image-widget&pos=pluginlist', 'https://theeventscalendar.com/product/wordpress-events-calendar-pro/?source=image-widget&pos=pluginlist' ) . '</span>';
+			$meta[] = '<strong>' . esc_html__( 'Coming Soon:', 'image-widget' ) . '</strong> <a href="http://m.tri.be/19ma" target="_blank">' . esc_html__( 'Image Widget Plus', 'image-widget' ) . '</a>';
 		}
 		return $meta;
 	}

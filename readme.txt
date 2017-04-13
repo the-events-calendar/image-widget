@@ -43,6 +43,13 @@ Image Widget Plus features include:
 * Slideshow
 * Lightbox
 
+*For more features including support for multiple images, check out our upcoming [Image Widget Plus!](http://m.tri.be/19m8)*
+
+This plugin is actively supported and we will do our best to help you. In return we simply ask 2 things:
+
+1. Help Out. If you see a question on the forum you can help with or have a great idea and want to code it up and submit a patch, that would be just plain awesome and we will shower your with praise. Might even be a good way to get to know us and lead to some paid work if you freelance.  Also, we are happy to post translations if you provide them.
+1. Support us by buying our Premium plugins. In particular, *check out our upcoming [Image Widget Plus!](http://m.tri.be/19m8) or our well established [Events Calendar Pro](https://theeventscalendar.com/product/wordpress-events-calendar-pro/?src=imagewidget) or [Event Tickets Plus](https://theeventscalendar.com/product/wordpress-event-tickets-plus/?src=imagewidget)*.
+
 [Check out Image Widget Plus now!](http://m.tri.be/19mg)
 
 = Pull Requests & Translations =
@@ -209,7 +216,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 = 4.3.1 =
 
-* Tweak - adjusted promotional text
+* Upgrade admin notice code.
 
 = 4.3 =
 

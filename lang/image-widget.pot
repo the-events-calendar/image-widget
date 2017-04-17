@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Image Widget\n"
-"POT-Creation-Date: 2017-03-20 08:23-0400\n"
+"POT-Creation-Date: 2017-04-17 09:33-0400\n"
 "PO-Revision-Date: 2017-03-17 17:01-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -15,64 +15,70 @@ msgstr ""
 "X-Poedit-WPHeader: image-widget.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: image-widget.php:40
+#: image-widget.php:42
 msgid "Showcase a single image with a Title, URL, and a Description"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: image-widget.php:42
+#: image-widget.php:44
 msgid "Image Widget"
 msgstr ""
 
-#: image-widget.php:77 views/widget-admin.php:13
+#: image-widget.php:80 views/widget-admin.php:13
 msgid "Select an Image"
 msgstr ""
 
-#: image-widget.php:78 lib/ImageWidgetDeprecated.php:66
+#: image-widget.php:81 lib/ImageWidgetDeprecated.php:66
 msgid "Insert Into Widget"
 msgstr ""
 
-#: image-widget.php:346
+#: image-widget.php:365
 msgid "Full Size"
 msgstr ""
 
-#: image-widget.php:347
+#: image-widget.php:366
 msgid "Thumbnail"
 msgstr ""
 
-#: image-widget.php:348
+#: image-widget.php:367
 msgid "Medium"
 msgstr ""
 
-#: image-widget.php:349
+#: image-widget.php:368
 msgid "Large"
 msgstr ""
 
-#: image-widget.php:350
+#: image-widget.php:369
 msgid "Custom"
 msgstr ""
 
-#: image-widget.php:428
-msgid ""
-"Thanks for using the Image Widget by Modern Tribe! If you like these "
-"features, you'll love what we're working on next."
-msgstr ""
-
-#: image-widget.php:431
+#: image-widget.php:507
 #, php-format
-msgid "Check out the new %1$sImage Widget Plus%2$s!"
+msgid ""
+"<p class=\"dashicons-before dashicons-format-gallery\"><strong><a href=\"%s"
+"\" target=\"_blank\">Image Widget Plus</a></strong> is coming soon! Add "
+"random images, lightbox, and slider - <strong><a href=\"%s\">Sign up now "
+"for early access.</a></strong></p>"
 msgstr ""
 
-#: image-widget.php:450
+#: image-widget.php:524
+#, php-format
+msgid ""
+"<p class=\"dashicons-before dashicons-star-filled\"><strong>Image Widget "
+"Plus</strong> - Add lightbox, slideshow, and random image widgets. "
+"<strong><a href=\"%s\" target=\"_blank\">Find out how!</a></strong></p>"
+msgstr ""
+
+#: image-widget.php:539
 msgid "Coming Soon:"
 msgstr ""
 
-#: image-widget.php:450
+#: image-widget.php:539
 msgid "Image Widget Plus"
 msgstr ""
 
@@ -166,7 +172,10 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "A simple image widget that uses the native WordPress media manager to add "
-"image widgets to your site."
+"image widgets to your site. <strong>COMING SOON: <a href=\"http://"
+"theeventscalendar.org/products/image-widget-plus/?utm_campaign=in-"
+"app&utm_source=docblock&utm_medium=image-widget\">Image Widget Plus</a> - "
+"Multiple images, slider and more.</strong>"
 msgstr ""
 
 #. Author of the plugin/theme
@@ -174,5 +183,5 @@ msgid "Modern Tribe, Inc."
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://m.tri.be/26"
+msgid "http://m.tri.be/iwpdoc"
 msgstr ""

@@ -2,9 +2,9 @@
 /*
 Plugin Name: Image Widget
 Plugin URI: http://wordpress.org/plugins/image-widget/
-Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong>COMING SOON: <a href="https://theeventscalendar.com/products/image-widget-plus/?utm_campaign=in-app&utm_source=docblock&utm_medium=image-widget">Image Widget Plus</a> - Multiple images, slider and more.</strong>
+Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong>COMING SOON: <a href="http://m.tri.be/19m-">Image Widget Plus</a> - Multiple images, slider and more.</strong>
 Author: Modern Tribe, Inc.
-Version: 4.4
+Version: 4.4.1
 Author URI: http://m.tri.be/iwpdoc
 Text Domain: image-widget
 Domain Path: /lang
@@ -26,7 +26,7 @@ add_action( 'widgets_init', 'tribe_load_image_widget' );
  **/
 class Tribe_Image_Widget extends WP_Widget {
 
-	const VERSION = '4.4';
+	const VERSION = '4.4.1';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
 

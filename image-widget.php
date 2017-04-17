@@ -4,7 +4,7 @@ Plugin Name: Image Widget
 Plugin URI: http://wordpress.org/plugins/image-widget/
 Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong>COMING SOON: <a href="http://theeventscalendar.org/products/image-widget-plus/?utm_campaign=in-app&utm_source=docblock&utm_medium=image-widget">Image Widget Plus</a> - Multiple images, slider and more.</strong>
 Author: Modern Tribe, Inc.
-Version: 4.3.2
+Version: 4.4
 Author URI: http://m.tri.be/iwpdoc
 Text Domain: image-widget
 Domain Path: /lang
@@ -26,7 +26,7 @@ add_action( 'widgets_init', 'tribe_load_image_widget' );
  **/
 class Tribe_Image_Widget extends WP_Widget {
 
-	const VERSION = '4.3.2';
+	const VERSION = '4.4';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
 
@@ -440,27 +440,30 @@ class Tribe_Image_Widget extends WP_Widget {
 		if ( ! current_user_can( 'install_plugins' ) ) return;
 
 		global $pagenow;
-		$whitelist = array( 'plugins.php', 'widgets.php' );
-		if ( !in_array( $pagenow, $whitelist ) ) return;
-
-		if ( get_site_option( self::VERSION_KEY ) == self::VERSION ) return;
-
-		$msg = sprintf( __( '<p>Thanks for using the Image Widget! FYI, the Image Widget Plus is coming soon, including a slider, lightbox and random images!</p><p><strong><a href="%s">Read more about the new Image Widget Plus!</a></strong></p>', 'image-widget' ), 'http://theeventscalendar.org/products/image-widget-plus/?utm_campaign=in-app&utm_source=nag&utm_medium=image-widget' );
-		echo "<div class='notice notice-info is-dismissible image-widget-notice' data-key='".self::VERSION."'>$msg</div>";
-
+		$msg = false;
+		switch ( $pagenow ) {
+			case 'plugins.php' :
+				$msg = $this->upgrade_nag_plugins_admin_msg();
+				break;
+			case 'widgets.php' :
+				$msg = $this->upgrade_nag_widget_admin_msg();
+				break; 		
+		}
+		
+		if ( !$msg ) return;
+		
+		echo $msg;
 		?><script>
 			jQuery(document).ready(function($){
 				// Dismiss our admin notice
 				$( document ).on( 'click', '.image-widget-notice .notice-dismiss', function () {
-					console.log('test');
 					var key = $( this ).closest( '.image-widget-notice' ).data( 'key' );
-					console.log(key);
 					$.ajax( ajaxurl,
 						{
 							type: 'POST',
 							data: {
 								action: 'dismissed_image_widget_notice_handler',
-								key: key,
+								key: key
 							}
 						} );
 				} );
@@ -473,8 +476,55 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	function ajax_notice_handler() {
 		if ( empty( $_POST['key'] ) ) return;
-		$version = sanitize_text_field( $_POST['key'] );
-		update_site_option( self::VERSION_KEY, $version );
+		$key = $this->generate_key( sanitize_text_field( $_POST['key'] ) );
+		update_site_option( $key, self::VERSION );
+	}
+	
+	/**
+	 * Generate version key for admin notice options
+	 *
+	 * @param string $key
+	 * @return string option key
+	 */
+	private function generate_key( $key ) {
+		$option_key = join( "_", array(
+			self::VERSION_KEY,
+			$key
+		) );
+		return $option_key;
+	}
+	
+	/**
+	 * Upgrade nag: Plugins Admin
+	 *
+	 * @return string alert message.
+	 */
+	private function upgrade_nag_plugins_admin_msg() {
+		$key = "plugin";
+		$option_key = $this->generate_key( $key );
+		if ( get_site_option( $option_key ) == self::VERSION ) return;
+		$msg = sprintf( 
+			__( '<p class="dashicons-before dashicons-format-gallery"><strong><a href="%s" target="_blank">Image Widget Plus</a></strong> is coming soon! Add random images, lightbox, and slider - <strong><a href="%s">Sign up now for early access.</a></strong></p>','image-widget' ),
+			'http://m.tri.be/19my',
+			'http://m.tri.be/19my'
+		);
+		return "<div class='notice notice-info is-dismissible image-widget-notice' data-key='$key'>$msg</div>";
+	}
+	
+	/**
+	 * Upgrade nag: Widget Admin
+	 *
+	 * @return string alert message.
+	 */
+	private function upgrade_nag_widget_admin_msg() {
+		$key = "widget";
+		$option_key = $this->generate_key( $key );
+		if ( get_site_option( $option_key ) == self::VERSION ) return;
+		$msg = sprintf( 
+			__( '<p class="dashicons-before dashicons-star-filled"><strong>Image Widget Plus</strong> - Add lightbox, slideshow, and random image widgets. <strong><a href="%s" target="_blank">Find out how!</a></strong></p>','image-widget' ),
+			'http://m.tri.be/19mx'
+		);
+		return "<div class='notice notice-info is-dismissible image-widget-notice' data-key='$key'>$msg</div>";
 	}
 
 	/**

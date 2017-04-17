@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image Widget
 Plugin URI: http://wordpress.org/plugins/image-widget/
-Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong>COMING SOON: <a href="http://theeventscalendar.org/products/image-widget-plus/?utm_campaign=in-app&utm_source=docblock&utm_medium=image-widget">Image Widget Plus</a> - Multiple images, slider and more.</strong>
+Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong>COMING SOON: <a href="https://theeventscalendar.com/products/image-widget-plus/?utm_campaign=in-app&utm_source=docblock&utm_medium=image-widget">Image Widget Plus</a> - Multiple images, slider and more.</strong>
 Author: Modern Tribe, Inc.
 Version: 4.4
 Author URI: http://m.tri.be/iwpdoc
@@ -57,7 +57,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			add_action( 'admin_notices', array( $this, 'post_upgrade_nag' ) );
 
 		add_action( 'network_admin_notices', array( $this, 'post_upgrade_nag' ) );
-		add_action( 'wp_ajax_dismissed_image_widget_notice_handler',  array( $this, 'ajax_notice_handler' ) );
+		add_action( 'wp_ajax_dismissed_image_widget_notice_handler', array( $this, 'ajax_notice_handler' ) );
 	}
 
 	/**
@@ -291,7 +291,7 @@ class Tribe_Image_Widget extends WP_Widget {
 				$instance['height'] = $image_details[2];
 			}
 
-			$image_srcset = wp_get_attachment_image_srcset( $instance['attachment_id'], $size);
+			$image_srcset = wp_get_attachment_image_srcset( $instance['attachment_id'], $size );
 			if ( $image_srcset ) {
 				$instance['srcset'] = $image_srcset;
 			}
@@ -321,10 +321,10 @@ class Tribe_Image_Widget extends WP_Widget {
 		if ( ! empty( $instance['align'] ) && $instance['align'] != 'none' ) {
 			$attr['class'] .= " align{$instance['align']}";
 		}
-		if  ( !empty($instance['srcset'] ) ) {
+		if ( ! empty( $instance['srcset'] ) ) {
 			$attr['srcset'] = $instance['srcset'];
 		}
-		if ( ! empty($instance['sizes'] ) ) {
+		if ( ! empty( $instance['sizes'] ) ) {
 			$attr['sizes'] = $instance['sizes'];
 		}
 		$attr = apply_filters( 'image_widget_image_attributes', $attr, $instance );
@@ -447,11 +447,11 @@ class Tribe_Image_Widget extends WP_Widget {
 				break;
 			case 'widgets.php' :
 				$msg = $this->upgrade_nag_widget_admin_msg();
-				break; 		
+				break;
 		}
-		
-		if ( !$msg ) return;
-		
+
+		if ( ! $msg ) return;
+
 		echo $msg;
 		?><script>
 			jQuery(document).ready(function($){
@@ -474,12 +474,12 @@ class Tribe_Image_Widget extends WP_Widget {
 	/**
 	 * AJAX handler to store the state of dismissible notices.
 	 */
-	function ajax_notice_handler() {
+	public function ajax_notice_handler() {
 		if ( empty( $_POST['key'] ) ) return;
 		$key = $this->generate_key( sanitize_text_field( $_POST['key'] ) );
 		update_site_option( $key, self::VERSION );
 	}
-	
+
 	/**
 	 * Generate version key for admin notice options
 	 *
@@ -487,41 +487,41 @@ class Tribe_Image_Widget extends WP_Widget {
 	 * @return string option key
 	 */
 	private function generate_key( $key ) {
-		$option_key = join( "_", array(
+		$option_key = join( '_', array(
 			self::VERSION_KEY,
-			$key
+			$key,
 		) );
 		return $option_key;
 	}
-	
+
 	/**
 	 * Upgrade nag: Plugins Admin
 	 *
 	 * @return string alert message.
 	 */
 	private function upgrade_nag_plugins_admin_msg() {
-		$key = "plugin";
+		$key = 'plugin';
 		$option_key = $this->generate_key( $key );
 		if ( get_site_option( $option_key ) == self::VERSION ) return;
-		$msg = sprintf( 
-			__( '<p class="dashicons-before dashicons-format-gallery"><strong><a href="%s" target="_blank">Image Widget Plus</a></strong> is coming soon! Add random images, lightbox, and slider - <strong><a href="%s">Sign up now for early access.</a></strong></p>','image-widget' ),
+		$msg = sprintf(
+			__( '<p class="dashicons-before dashicons-format-gallery"><strong><a href="%s" target="_blank">Image Widget Plus</a></strong> is coming soon! Add random images, lightbox, and slider - <strong><a href="%s">Sign up now for early access.</a></strong></p>', 'image-widget' ),
 			'http://m.tri.be/19my',
 			'http://m.tri.be/19my'
 		);
 		return "<div class='notice notice-info is-dismissible image-widget-notice' data-key='$key'>$msg</div>";
 	}
-	
+
 	/**
 	 * Upgrade nag: Widget Admin
 	 *
 	 * @return string alert message.
 	 */
 	private function upgrade_nag_widget_admin_msg() {
-		$key = "widget";
+		$key = 'widget';
 		$option_key = $this->generate_key( $key );
 		if ( get_site_option( $option_key ) == self::VERSION ) return;
-		$msg = sprintf( 
-			__( '<p class="dashicons-before dashicons-star-filled"><strong>Image Widget Plus</strong> - Add lightbox, slideshow, and random image widgets. <strong><a href="%s" target="_blank">Find out how!</a></strong></p>','image-widget' ),
+		$msg = sprintf(
+			__( '<p class="dashicons-before dashicons-star-filled"><strong>Image Widget Plus</strong> - Add lightbox, slideshow, and random image widgets. <strong><a href="%s" target="_blank">Find out how!</a></strong></p>', 'image-widget' ),
 			'http://m.tri.be/19mx'
 		);
 		return "<div class='notice notice-info is-dismissible image-widget-notice' data-key='$key'>$msg</div>";

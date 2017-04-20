@@ -192,7 +192,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			.uploader input.button {
 				width: 100%;
 				height: 34px;
-				line-height: 33px;
+				line-height: 1;
 				margin-top: 15px;
 			}
 			.tribe_preview .aligncenter {
@@ -207,6 +207,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			.tribe_preview img {
 				margin: 10px 0;
 				height: auto;
+				max-width: 100%;
 			}
 		</style>
 		<?php

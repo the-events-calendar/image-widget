@@ -292,12 +292,17 @@ class Tribe_Image_Widget extends WP_Widget {
 				$instance['height'] = $image_details[2];
 			}
 
-			$image_srcset = wp_get_attachment_image_srcset( $instance['attachment_id'], $size );
+
+			$image_srcset = function_exists( 'wp_get_attachment_image_srcset' )
+				? wp_get_attachment_image_srcset( $instance['attachment_id'], $size )
+				: false;
 			if ( $image_srcset ) {
 				$instance['srcset'] = $image_srcset;
 			}
 
- 			$image_sizes = wp_get_attachment_image_sizes( $instance['attachment_id'], $size );
+ 			$image_sizes = function_exists( 'wp_get_attachment_image_sizes' )
+				? wp_get_attachment_image_sizes( $instance['attachment_id'], $size )
+				: false;
  			if ( $image_sizes ) {
 				$instance['sizes'] = $image_sizes;
 			}

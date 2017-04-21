@@ -207,6 +207,11 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
+= unreleased =
+
+* Fix - fixed compatibility with WordPress versions prior to 4.4
+* Fix - proportional scaling of image within the widget editor
+
 = 4.4.1 =
 
 * Fix - fixed some broken links

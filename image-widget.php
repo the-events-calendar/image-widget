@@ -274,7 +274,9 @@ class Tribe_Image_Widget extends WP_Widget {
 			$attr = array_map( 'esc_attr', $attr );
 			$output = '<a';
 			foreach ( $attr as $name => $value ) {
-				$output .= sprintf( ' %s="%s"', $name, $value );
+				if ( ! empty( $value ) ) {
+					$output .= sprintf( ' %s="%s"', $name, $value );
+				}
 			}
 			$output .= '>';
 		}
@@ -292,44 +294,54 @@ class Tribe_Image_Widget extends WP_Widget {
 				$instance['height'] = $image_details[2];
 			}
 
-
 			$image_srcset = function_exists( 'wp_get_attachment_image_srcset' )
 				? wp_get_attachment_image_srcset( $instance['attachment_id'], $size )
 				: false;
 			if ( $image_srcset ) {
 				$instance['srcset'] = $image_srcset;
-			}
 
- 			$image_sizes = function_exists( 'wp_get_attachment_image_sizes' )
-				? wp_get_attachment_image_sizes( $instance['attachment_id'], $size )
-				: false;
- 			if ( $image_sizes ) {
-				$instance['sizes'] = $image_sizes;
+				$image_sizes = function_exists( 'wp_get_attachment_image_sizes' )
+					? wp_get_attachment_image_sizes( $instance['attachment_id'], $size )
+					: false;
+	 			if ( $image_sizes ) {
+					$instance['sizes'] = $image_sizes;
+				}
 			}
 		}
 		$instance['width'] = abs( $instance['width'] );
 		$instance['height'] = abs( $instance['height'] );
 
 		$attr = array();
-		$attr['alt'] = ( ! empty( $instance['alt'] ) ) ? $instance['alt'] : $instance['title'];
+
+		if ( ! empty( $instance['alt'] ) ) {
+			$attr['alt'] = $instance['alt'];
+		} elseif ( ! empty( $instance['title'] ) ) {
+			$attr['alt'] = $instance['title'];
+		}
+
 		if ( is_array( $size ) ) {
 			$attr['class'] = 'attachment-' . join( 'x', $size );
 		} else {
 			$attr['class'] = 'attachment-' . $size;
 		}
+
 		$attr['style'] = '';
 		if ( ! empty( $instance['maxwidth'] ) ) {
 			$attr['style'] .= "max-width: {$instance['maxwidth']};";
 		}
+
 		if ( ! empty( $instance['maxheight'] ) ) {
 			$attr['style'] .= "max-height: {$instance['maxheight']};";
 		}
+
 		if ( ! empty( $instance['align'] ) && $instance['align'] != 'none' ) {
 			$attr['class'] .= " align{$instance['align']}";
 		}
+
 		if ( ! empty( $instance['srcset'] ) ) {
 			$attr['srcset'] = $instance['srcset'];
 		}
+
 		if ( ! empty( $instance['sizes'] ) ) {
 			$attr['sizes'] = $instance['sizes'];
 		}

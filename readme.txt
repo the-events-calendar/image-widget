@@ -207,10 +207,11 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
-= unreleased =
+= 4.4.2 =
 
 * Fix - fixed compatibility with WordPress versions prior to 4.4
 * Fix - proportional scaling of image within the widget editor
+* Fix - fix validation by avoiding empty attributes and only specifying sizes with srcset (thanks Zodiak1978)
 
 = 4.4.1 =
 

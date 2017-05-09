@@ -301,8 +301,8 @@ class Tribe_Image_Widget extends WP_Widget {
 				$instance['srcset'] = $image_srcset;
 
 				$image_sizes = function_exists( 'wp_get_attachment_image_sizes' )
-				? wp_get_attachment_image_sizes( $instance['attachment_id'], $size )
-				: false;
+					? wp_get_attachment_image_sizes( $instance['attachment_id'], $size )
+					: false;
 	 			if ( $image_sizes ) {
 					$instance['sizes'] = $image_sizes;
 				}

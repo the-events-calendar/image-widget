@@ -73,6 +73,14 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	public function admin_setup() {
 
+		// Only load on widget admin page and in the "Customizer" view.
+		$screen      = get_current_screen();
+		$should_load = 'customize' == $screen->base || 'widgets' == $screen->base;
+
+		if ( ! $should_load ) {
+			return;
+		}
+
 		wp_enqueue_media();
 
 		wp_enqueue_style( 'tribe-image-widget', plugins_url( 'resources/css/admin.css', __FILE__ ), array(), self::VERSION );

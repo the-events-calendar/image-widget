@@ -1,0 +1,23 @@
+.uploader input.button {
+	height: 34px;
+	line-height: 1;
+	margin-top: 15px;
+	width: 100%;
+}
+
+.tribe_preview .aligncenter {
+	display: block;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.tribe_preview {
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.tribe_preview img {
+	height: auto;
+	margin: 10px 0;
+	max-width: 100%;
+}

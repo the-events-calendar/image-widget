@@ -47,9 +47,8 @@ class Tribe_Image_Widget extends WP_Widget {
 			require_once( 'lib/ImageWidgetDeprecated.php' );
 			new ImageWidgetDeprecated( $this );
 		} else {
-			add_action( 'sidebar_admin_setup', array( $this, 'admin_setup' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'admin_setup' ) );
 		}
-		add_action( 'admin_head-widgets.php', array( $this, 'admin_head' ) );
 
 		add_action( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
 
@@ -70,10 +69,22 @@ class Tribe_Image_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Enqueue all the javascript.
+	 * Enqueue all the javascript and CSS.
 	 */
 	public function admin_setup() {
+
+		// Only load on widget admin page and in the "Customizer" view.
+		$screen      = get_current_screen();
+		$should_load = 'customize' == $screen->base || 'widgets' == $screen->base;
+
+		if ( ! $should_load ) {
+			return;
+		}
+
 		wp_enqueue_media();
+
+		wp_enqueue_style( 'tribe-image-widget', plugins_url( 'resources/css/admin.css', __FILE__ ), array(), self::VERSION );
+
 		wp_enqueue_script( 'tribe-image-widget', plugins_url( 'resources/js/image-widget.js', __FILE__ ), array( 'jquery', 'media-upload', 'media-views' ), self::VERSION );
 
 		wp_localize_script( 'tribe-image-widget', 'TribeImageWidget', array(
@@ -179,38 +190,6 @@ class Tribe_Image_Widget extends WP_Widget {
 		} else {
 			include( $this->getTemplateHierarchy( 'widget-admin' ) );
 		}
-	}
-
-	/**
-	 * Admin header css
-	 *
-	 * @author Modern Tribe, Inc.
-	 */
-	public function admin_head() {
-		?>
-		<style type="text/css">
-			.uploader input.button {
-				width: 100%;
-				height: 34px;
-				line-height: 1;
-				margin-top: 15px;
-			}
-			.tribe_preview .aligncenter {
-				display: block;
-				margin-left: auto !important;
-				margin-right: auto !important;
-			}
-			.tribe_preview {
-				overflow: hidden;
-				max-height: 300px;
-			}
-			.tribe_preview img {
-				margin: 10px 0;
-				height: auto;
-				max-width: 100%;
-			}
-		</style>
-		<?php
 	}
 
 	/**

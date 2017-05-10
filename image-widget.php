@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image Widget
 Plugin URI: http://wordpress.org/plugins/image-widget/
-Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong>COMING SOON: <a href="http://m.tri.be/19m-">Image Widget Plus</a> - Multiple images, slider and more.</strong>
+Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong><a href="http://m.tri.be/19m-">Image Widget Plus</a> - Multiple images, slider and more.</strong>
 Author: Modern Tribe, Inc.
 Version: 4.4.1
 Author URI: http://m.tri.be/iwpdoc
@@ -522,7 +522,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		$option_key = $this->generate_key( $key );
 		if ( get_site_option( $option_key ) == self::VERSION ) return;
 		$msg = sprintf(
-			__( '<p class="dashicons-before dashicons-format-gallery"><strong><a href="%s" target="_blank">Image Widget Plus</a></strong> is coming soon! Add random images, lightbox, and slider - <strong><a href="%s">Sign up now for early access.</a></strong></p>', 'image-widget' ),
+			__( '<p class="dashicons-before dashicons-format-gallery"><strong>Image Widget Plus</strong> - Add lightbox, slideshow, and random image widgets. <strong><a href="%s" target="_blank">Find out how!</a></strong></p>', 'image-widget' ),
 			'http://m.tri.be/19my',
 			'http://m.tri.be/19my'
 		);
@@ -554,7 +554,7 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	public function plugin_row_meta( $meta, $file ) {
 		if ( $file == plugin_basename( dirname( __FILE__ ) . '/image-widget.php' ) ) {
-			$meta[] = '<strong>' . esc_html__( 'Coming Soon:', 'image-widget' ) . '</strong> <a href="http://m.tri.be/19ma" target="_blank">' . esc_html__( 'Image Widget Plus', 'image-widget' ) . '</a>';
+			$meta[] = '<strong><a href="http://m.tri.be/19ma" target="_blank">' . esc_html__( 'Image Widget Plus', 'image-widget' ) . '</a></strong>';
 		}
 		return $meta;
 	}

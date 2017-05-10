@@ -49,7 +49,6 @@ class Tribe_Image_Widget extends WP_Widget {
 		} else {
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_setup' ) );
 		}
-		//add_action( 'admin_head-widgets.php', array( $this, 'admin_head' ) );
 
 		add_action( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
 

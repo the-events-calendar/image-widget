@@ -1,7 +1,7 @@
 === Image Widget ===
 Contributors: ModernTribe, peterchester, borkweb, zbtirrell
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
-Tags: widget, image, ad, banner, simple, upload, sidebar, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
+Tags: widget, image, ad, banner, simple, upload, sidebar, retina, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 4.7.3
 Stable tag: 4.4.1
@@ -32,9 +32,7 @@ Image Widget is developed and maintained by [Modern Tribe](http://m.tri.be/19md)
 
 This plugin is actively supported by our team and contributions from community members. If you see a question in the forum you can help with or have a great idea and want to code it up or submit a patch, that would be awesome! Not only will we shower you with praise and thanks, it’s also a good way to get to know us and lead into options for paid work if you freelance.
 
-= Coming Soon - Image Widget Plus! =
-
-Looking for more features? Our [new Image Widget Plus plugin](http://m.tri.be/19mf) is coming soon!
+= Image Widget Plus! =
 
 Image Widget Plus features include:
 

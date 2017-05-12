@@ -1,5 +1,5 @@
 === Image Widget ===
-Contributors: ModernTribe, peterchester, borkweb, zbtirrell, aguseo, barry.hughes, cliffpaulick, courane01, GeoffBel, neillmcshea, nicosantos, shelbelliott, tribecari, trishasalas, vicskf
+Contributors: ModernTribe, peterchester, borkweb, zbtirrell, aguseo, barry.hughes, cliffpaulick, courane01, GeoffBel, ggwicz, jentheo, neillmcshea, nicosantos, shelbelliott, tribecari, trishasalas, vicskf
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
 Tags: widget, image, ad, banner, simple, upload, sidebar, retina, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5

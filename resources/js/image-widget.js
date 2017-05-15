@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
 		render : function( widget_id, widget_id_string, attachment ) {
 
 			var $attachment_id = $( document.getElementById( widget_id_string + 'attachment_id' ) );
-			var $image_url     = $( document.getElementById( widget_id_string + 'image_url' ) );
+			var $image_url     = $( document.getElementById( widget_id_string + 'imageurl' ) );
 
 			$("#" + widget_id_string + 'preview').html(imageWidget.imgHTML( attachment ));
 

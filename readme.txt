@@ -206,6 +206,11 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
+= 4.4.3 =
+
+* Fix - Fixed bug where selecting an image failed to trigger a Save & Publish in the Customizer (props to dsaric-dev for the fix)
+* Tweak - Roll-back to sidebar_admin_setup to enqueue resources for optimal plugin compatibility (props to megamenu for the heads up)
+
 = 4.4.2 =
 
 * Fix - fixed compatibility with WordPress versions prior to 4.4

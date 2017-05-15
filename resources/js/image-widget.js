@@ -34,8 +34,16 @@ jQuery(document).ready(function($){
 
 			$("#" + widget_id_string + 'fields').slideDown();
 
-			$("#" + widget_id_string + 'attachment_id').val(attachment.id);
-			$("#" + widget_id_string + 'imageurl').val(attachment.url);
+			var $attachment_id = $("#" + widget_id_string + 'attachment_id');
+			if ($attachment_id.val() !== attachment.id) {
+				$attachment_id.val(attachment.id).trigger('change');
+			}
+
+			var $image_url = $("#" + widget_id_string + 'image_url');
+			if ($image_url.val() !== attachment.url) {
+				$image_url.val(attachment.url).trigger('change');
+			}
+
 			$("#" + widget_id_string + 'aspect_ratio').val(attachment.width/attachment.height);
 			$("#" + widget_id_string + 'width').val(attachment.width);
 			$("#" + widget_id_string + 'height').val(attachment.height);

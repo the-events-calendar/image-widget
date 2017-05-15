@@ -21,6 +21,7 @@ jQuery(document).ready(function($){
 			frame.on('close',function( ) {
 				var attachments = frame.state().get('selection').toJSON();
 				imageWidget.render( widget_id, widget_id_string, attachments[0] );
+				imageWidget.trigger_change( $( '.widget-id[value="' + widget_id + '"]' ).closest( '.widget' ) );
 			});
 
 			frame.open();
@@ -100,6 +101,16 @@ jQuery(document).ready(function($){
 				$( '#' + widget_id_string + 'width' ).val(width);
 				//imageWidget.changeImgSize( widget_id, widget_id_string, width, height );
 			}
+		},
+
+		/**
+		 * Triggers a change in the UI so the customizer can detect a change and save
+		 */
+		trigger_change: function( $widget ) {
+			var id_base = $widget.find( '.id_base' ).val();
+			var id_num  = $widget.find( '.widget_number' ).val();
+
+			$widget.find( '#widget-' + id_base + '-' + id_num + '-align' ).trigger( 'change' );
 		}
 
 	};

@@ -208,7 +208,8 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 = 4.4.3 =
 
-* Tweak - Added an image_widget_load_screens filter for plugin compatibility (props to megamenu for this tweak!)
+* Fix - Fixed bug where selecting an image failed to trigger a Save & Publish in the Customizer
+* Tweak - Roll-back to sidebar_admin_setup to enqueue resources for optimal plugin compatibility (props to megamenu for the heads up)
 
 = 4.4.2 =
 

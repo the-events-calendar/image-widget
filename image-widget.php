@@ -47,8 +47,11 @@ class Tribe_Image_Widget extends WP_Widget {
 			require_once( 'lib/ImageWidgetDeprecated.php' );
 			new ImageWidgetDeprecated( $this );
 		} else {
-			add_action( 'admin_enqueue_scripts', array( $this, 'admin_setup' ) );
+			add_action( 'sidebar_admin_setup', array( $this, 'admin_setup' ) );
 		}
+
+		// fire admin_setup if we are in the customizer
+		add_action( 'admin_enqueue_scripts', array( $this, 'maybe_admin_setup' ) );
 
 		add_action( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
 
@@ -72,24 +75,6 @@ class Tribe_Image_Widget extends WP_Widget {
 	 * Enqueue all the javascript and CSS.
 	 */
 	public function admin_setup() {
-
-		// Only load on widget admin page and in the "Customizer" view.
-		$screen      = get_current_screen();
-		$should_load = false;
-
-		$screens_to_load = apply_filters( 'image_widget_load_screens', array( 'customize', 'widgets' ) );
-
-		foreach ( $screens_to_load as $screen_to_load ) {
-			if ( $screen_to_load === $screen->base ) {
-				$should_load = true;
-				break;
-			}
-		}
-
-		if ( ! $should_load ) {
-			return;
-		}
-
 		wp_enqueue_media();
 
 		wp_enqueue_style( 'tribe-image-widget', plugins_url( 'resources/css/admin.css', __FILE__ ), array(), self::VERSION );
@@ -100,6 +85,17 @@ class Tribe_Image_Widget extends WP_Widget {
 			'frame_title' => __( 'Select an Image', 'image-widget' ),
 			'button_title' => __( 'Insert Into Widget', 'image-widget' ),
 		) );
+	}
+
+	public function maybe_admin_setup() {
+		// Only load on widget admin page and in the "Customizer" view.
+		$screen      = get_current_screen();
+
+		if ( 'customize' !== $screen->base ) {
+			return;
+		}
+
+		$this->admin_setup();
 	}
 
 	/**

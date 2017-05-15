@@ -89,7 +89,7 @@ class Tribe_Image_Widget extends WP_Widget {
 
 	public function maybe_admin_setup() {
 		// Only load on widget admin page and in the "Customizer" view.
-		$screen      = get_current_screen();
+		$screen = get_current_screen();
 
 		if ( 'customize' !== $screen->base ) {
 			return;

@@ -75,7 +75,16 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		// Only load on widget admin page and in the "Customizer" view.
 		$screen      = get_current_screen();
-		$should_load = 'customize' == $screen->base || 'widgets' == $screen->base;
+		$should_load = false;
+
+		$screens_to_load = apply_filters( 'image_widget_load_screens', array( 'customize', 'widgets' ) );
+
+		foreach ( $screens_to_load as $screen_to_load ) {
+			if ( $screen_to_load === $screen->base ) {
+				$should_load = true;
+				break;
+			}
+		}
 
 		if ( ! $should_load ) {
 			return;

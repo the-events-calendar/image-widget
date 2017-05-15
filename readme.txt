@@ -206,6 +206,10 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
+= 4.4.3 =
+
+* Tweak - Added an image_widget_load_screens filter for plugin compatibility (props to megamenu for this tweak!)
+
 = 4.4.2 =
 
 * Fix - fixed compatibility with WordPress versions prior to 4.4

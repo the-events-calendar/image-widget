@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, image, ad, banner, simple, upload, sidebar, retina, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
 Tested up to: 4.7.3
-Stable tag: 4.4.2
+Stable tag: 4.4.3
 
 A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 

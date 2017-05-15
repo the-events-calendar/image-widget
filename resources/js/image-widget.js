@@ -21,7 +21,6 @@ jQuery(document).ready(function($){
 			frame.on('close',function( ) {
 				var attachments = frame.state().get('selection').toJSON();
 				imageWidget.render( widget_id, widget_id_string, attachments[0] );
-				imageWidget.trigger_change( $( '.widget-id[value="' + widget_id + '"]' ).closest( '.widget' ) );
 			});
 
 			frame.open();
@@ -31,12 +30,23 @@ jQuery(document).ready(function($){
 		// Output Image preview and populate widget form.
 		render : function( widget_id, widget_id_string, attachment ) {
 
+			var $attachment_id = $( document.getElementById( widget_id_string + 'attachment_id' ) );
+			var $image_url     = $( document.getElementById( widget_id_string + 'image_url' ) );
+
 			$("#" + widget_id_string + 'preview').html(imageWidget.imgHTML( attachment ));
 
 			$("#" + widget_id_string + 'fields').slideDown();
 
-			$("#" + widget_id_string + 'attachment_id').val(attachment.id);
-			$("#" + widget_id_string + 'imageurl').val(attachment.url);
+			// update the attachment id if it has changed
+			if ( $attachment_id.val() !== attachment.id ) {
+				$attachment_id.val( attachment.id ).trigger( 'change' );
+			}
+
+			// update the url if it has changed
+			if ( $image_url.val() !== attachment.url ) {
+				$image_url.val( attachment.url ).trigger( 'change' );
+			}
+
 			$("#" + widget_id_string + 'aspect_ratio').val(attachment.width/attachment.height);
 			$("#" + widget_id_string + 'width').val(attachment.width);
 			$("#" + widget_id_string + 'height').val(attachment.height);
@@ -101,16 +111,6 @@ jQuery(document).ready(function($){
 				$( '#' + widget_id_string + 'width' ).val(width);
 				//imageWidget.changeImgSize( widget_id, widget_id_string, width, height );
 			}
-		},
-
-		/**
-		 * Triggers a change in the UI so the customizer can detect a change and save
-		 */
-		trigger_change: function( $widget ) {
-			var id_base = $widget.find( '.id_base' ).val();
-			var id_num  = $widget.find( '.widget_number' ).val();
-
-			$widget.find( '#widget-' + id_base + '-' + id_num + '-align' ).trigger( 'change' );
 		}
 
 	};

@@ -441,6 +441,9 @@ class Tribe_Image_Widget extends WP_Widget {
 	public function post_upgrade_nag() {
 		if ( ! current_user_can( 'install_plugins' ) ) return;
 
+		// don't show the notices if Image Widget Plus is already active 
+		if ( class_exists( 'Tribe__Image__Plus__Main' ) ) return;
+
 		global $pagenow;
 		$msg = false;
 		switch ( $pagenow ) {

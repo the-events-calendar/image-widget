@@ -206,7 +206,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
-= 4.4.3 =
+= 4.4.4 =
 
 * Tweak - Improve upsell notices display logic
 

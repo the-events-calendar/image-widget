@@ -439,7 +439,13 @@ class Tribe_Image_Widget extends WP_Widget {
 	 * Display a thank you nag when the plugin has been upgraded.
 	 */
 	public function post_upgrade_nag() {
-		if ( ! current_user_can( 'install_plugins' ) ) return;
+		
+		if ( 
+			! current_user_can( 'install_plugins' ) 
+			|| class_exists( 'Tribe__Image__Plus__Main' )
+		) {
+			return;
+		}
 
 		global $pagenow;
 		$msg = false;

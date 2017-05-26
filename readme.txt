@@ -206,6 +206,10 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
+= 4.4.4 =
+
+* Tweak - Improve upsell notices display logic
+
 = 4.4.3 =
 
 * Fix - Fixed bug where selecting an image failed to trigger a Save & Publish in the Customizer (props to dsaric-dev for the fix)

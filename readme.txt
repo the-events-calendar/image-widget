@@ -3,8 +3,8 @@ Contributors: ModernTribe, peterchester, borkweb, zbtirrell, aguseo, barry.hughe
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
 Tags: widget, image, ad, banner, simple, upload, sidebar, retina, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
 Requires at least: 3.5
-Tested up to: 4.7.3
-Stable tag: 4.4.3
+Tested up to: 4.7.5
+Stable tag: 4.4.4
 
 A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 
@@ -206,9 +206,9 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
-= 4.4.4 =
+= [4.4.4] 2017-05-31 =
 
-* Tweak - Improve upsell notices display logic
+* Tweak - Improve upsell notices display logic [78676]
 
 = 4.4.3 =
 

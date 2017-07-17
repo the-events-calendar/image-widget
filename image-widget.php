@@ -226,7 +226,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			$defaults['attachment_id'] = 0;
 		}
 
-		return apply_filters( 'image_widget_defaults', $defaults);
+		return apply_filters( 'image_widget_defaults', $defaults );
 	}
 
 	/**

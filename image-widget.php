@@ -225,6 +225,14 @@ class Tribe_Image_Widget extends WP_Widget {
 			$defaults['size'] = self::CUSTOM_IMAGE_SIZE_SLUG;
 			$defaults['attachment_id'] = 0;
 		}
+		
+		/**
+		 * Allow users to customize the default values of various Image Widget options.
+		 *
+		 * @since TBD
+		 *
+		 * @param array $defaults The array of default option values.
+		 */
 		return apply_filters( 'image_widget_option_defaults', $defaults ); 
 	}
 

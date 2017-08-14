@@ -225,8 +225,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			$defaults['size'] = self::CUSTOM_IMAGE_SIZE_SLUG;
 			$defaults['attachment_id'] = 0;
 		}
-
-		return apply_filters( 'image_widget_defaults', $defaults );
+		return apply_filters( 'image_widget_option_defaults', $defaults ); 
 	}
 
 	/**

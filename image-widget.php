@@ -149,11 +149,11 @@ class Tribe_Image_Widget extends WP_Widget {
 		$instance = $old_instance;
 		$new_instance = wp_parse_args( (array) $new_instance, self::get_defaults() );
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		//if ( current_user_can( 'unfiltered_html' ) ) {
+		if ( current_user_can( 'unfiltered_html' ) ) {
 			$instance['description'] = $new_instance['description'];
-		//} else {
-		//	$instance['description'] = wp_filter_post_kses( $new_instance['description'] );
-		//}
+		} else {
+			$instance['description'] = stripslashes( wp_filter_post_kses( addslashes($new_instance['description']) ) );
+		}
 		$instance['link'] = $new_instance['link'];
 		$instance['linkid'] = $new_instance['linkid'];
 		$instance['linktarget'] = $new_instance['linktarget'];

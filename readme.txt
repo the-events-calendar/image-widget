@@ -208,7 +208,8 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 = [4.4.6] TBD =
 
-* Tweak - Added new filter `tribe_image_widget_instance_description` for more control over how the description field is handled. Props to user @bridgetashley for insight on this one!
+* New - Added new filter `tribe_image_widget_instance_description` for more control over how the description field is handled.
+* Fix - Prevent broken HTML in the "description" field that sometimes arose with certain user roles. Props to users @bridgetashley and @JoshRoy spotting this one! 
 
 = [4.4.5] 2017-06-14 =
 

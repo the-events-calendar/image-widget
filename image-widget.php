@@ -158,7 +158,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		if ( current_user_can( 'unfiltered_html' ) ) {
 			$instance['description'] = $new_instance['description'];
 		} else {
-			$instance['description'] = wp_filter_post_kses( $new_instance['description'] );
+			$instance['description'] = wp_kses_post( $new_instance['description'] );
 		}
 
 		/**

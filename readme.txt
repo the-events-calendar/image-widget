@@ -206,6 +206,10 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
+= [4.4.6] TBD =
+
+* Tweak - Added new filter `tribe_image_widget_instance_description` for more control over how the description field is handled. Props to user @bridgetashley for insight on this one!
+
 = [4.4.5] 2017-06-14 =
 
 * Fix issue with image URLs in the widget admin interface [80659]

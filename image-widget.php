@@ -161,6 +161,17 @@ class Tribe_Image_Widget extends WP_Widget {
 			$instance['description'] = wp_filter_post_kses( $new_instance['description'] );
 		}
 
+		/**
+		 * Make the description filterable; especially useful for working with allowing/disallowing HTML and other content.
+		 *
+		 * @since TBD
+		 *
+		 * @param $description The current value of $instance['description'].
+		 * @param $new_instance The new instance of the widget, i.e. the new values being saved for it.
+		 * @param $old_instance The pre-existing instance of the widget, i.e. the values that are potentially being updated.
+		 */
+		$instance['description'] = apply_filters( 'tribe_image_widget_instance_description', $instance['description'], $new_instance, $old_instance );
+
 		$instance['link']       = $new_instance['link'];
 		$instance['linkid']     = $new_instance['linkid'];
 		$instance['linktarget'] = $new_instance['linktarget'];

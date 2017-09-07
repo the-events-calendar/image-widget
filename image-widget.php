@@ -21,9 +21,6 @@ function tribe_load_image_widget() {
 }
 add_action( 'widgets_init', 'tribe_load_image_widget' );
 
-/**
- * Tribe_Image_Widget class
- **/
 class Tribe_Image_Widget extends WP_Widget {
 
 	const VERSION = '4.4.4';
@@ -34,13 +31,13 @@ class Tribe_Image_Widget extends WP_Widget {
 
 	/**
 	 * Tribe Image Widget constructor
-	 *
-	 * @author Modern Tribe, Inc.
 	 */
 	public function __construct() {
 		load_plugin_textdomain( 'image-widget', false, trailingslashit( basename( dirname( __FILE__ ) ) ) . 'lang/' );
-		$widget_ops = array( 'classname' => 'widget_sp_image', 'description' => __( 'Showcase a single image with a Title, URL, and a Description', 'image-widget' ) );
+		
+		$widget_ops  = array( 'classname' => 'widget_sp_image', 'description' => __( 'Showcase a single image with a Title, URL, and a Description', 'image-widget' ) );
 		$control_ops = array( 'id_base' => 'widget_sp_image' );
+		
 		parent::__construct( 'widget_sp_image', __( 'Image Widget', 'image-widget' ), $widget_ops, $control_ops );
 
 		if ( $this->use_old_uploader() ) {
@@ -64,10 +61,14 @@ class Tribe_Image_Widget extends WP_Widget {
 
 	/**
 	 * Test to see if this version of WordPress supports the new image manager.
-	 * @return bool true if the current version of WordPress does NOT support the current image management tech.
+	 *
+	 * @return bool True if the current version of WordPress does NOT support the current image management tech.
 	 */
 	private function use_old_uploader() {
-		if ( defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) return true;
+		if ( defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) {
+			return true;
+		}
+
 		return ! function_exists( 'wp_enqueue_media' );
 	}
 
@@ -78,17 +79,18 @@ class Tribe_Image_Widget extends WP_Widget {
 		wp_enqueue_media();
 
 		wp_enqueue_style( 'tribe-image-widget', plugins_url( 'resources/css/admin.css', __FILE__ ), array(), self::VERSION );
-
 		wp_enqueue_script( 'tribe-image-widget', plugins_url( 'resources/js/image-widget.js', __FILE__ ), array( 'jquery', 'media-upload', 'media-views' ), self::VERSION );
 
 		wp_localize_script( 'tribe-image-widget', 'TribeImageWidget', array(
-			'frame_title' => __( 'Select an Image', 'image-widget' ),
+			'frame_title'  => __( 'Select an Image', 'image-widget' ),
 			'button_title' => __( 'Insert Into Widget', 'image-widget' ),
 		) );
 	}
 
+	/**
+	 * Trigger the enqueueing of admin scripts and styles on widget admin page and in the "Customizer" view.
+	 */
 	public function maybe_admin_setup() {
-		// Only load on widget admin page and in the "Customizer" view.
 		$screen = get_current_screen();
 
 		if ( 'customize' !== $screen->base ) {
@@ -103,7 +105,6 @@ class Tribe_Image_Widget extends WP_Widget {
 	 *
 	 * @param array $args
 	 * @param array $instance
-	 * @author Modern Tribe, Inc.
 	 */
 	public function widget( $args, $instance ) {
 		extract( $args );
@@ -130,7 +131,7 @@ class Tribe_Image_Widget extends WP_Widget {
 				$instance['attachment_id'] = apply_filters( 'image_widget_image_attachment_id', abs( $instance['attachment_id'] ), $args, $instance );
 				$instance['size']          = apply_filters( 'image_widget_image_size', esc_attr( $instance['size'] ), $args, $instance );
 			}
-	
+
 			$instance['imageurl'] = apply_filters( 'image_widget_image_url', esc_url( $instance['imageurl'] ), $args, $instance );
 
 			// No longer using extracted vars. This is here for backwards compatibility.
@@ -146,7 +147,6 @@ class Tribe_Image_Widget extends WP_Widget {
 	 * @param object $new_instance Widget Instance
 	 * @param object $old_instance Widget Instance
 	 * @return object
-	 * @author Modern Tribe, Inc.
 	 */
 	public function update( $new_instance, $old_instance ) {
 		
@@ -195,7 +195,6 @@ class Tribe_Image_Widget extends WP_Widget {
 	 * Form UI
 	 *
 	 * @param object $instance Widget Instance
-	 * @author Modern Tribe, Inc.
 	 */
 	public function form( $instance ) {
 		$instance = wp_parse_args( (array) $instance, self::get_defaults() );
@@ -345,6 +344,14 @@ class Tribe_Image_Widget extends WP_Widget {
 			$attr['sizes'] = $instance['sizes'];
 		}
 
+		/**
+		 * Allow filtering of the image attributes used on the front-end.
+		 *
+		 * @since TBD
+		 *
+		 * @param array $attr Image attributes to be filtered.
+		 * @param array $instance The current widget instance. 
+		 */
 		$attr = apply_filters( 'image_widget_image_attributes', $attr, $instance );
 
 		// If there is an imageurl, use it to render the image. Eventually we should kill this and simply rely on attachment_ids.
@@ -391,6 +398,13 @@ class Tribe_Image_Widget extends WP_Widget {
 			self::CUSTOM_IMAGE_SIZE_SLUG => __( 'Custom', 'image-widget' ),
 		) );
 
+		/**
+		 * Allow filtering the image sizes available for use in the Image Widget dropdown
+		 *
+		 * @since TBD
+		 *
+		 * @param array $possible_sizes The array of available sizes.
+		 */
 		return (array) apply_filters( 'image_size_names_choose', $possible_sizes );
 	}
 
@@ -409,6 +423,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		} else {
 			$size = 'full';
 		}
+
 		return $size;
 	}
 
@@ -439,8 +454,7 @@ class Tribe_Image_Widget extends WP_Widget {
 	 *
 	 * @param string $template template file to search for
 	 * @return template path
-	 * @author Modern Tribe, Inc. (Matt Wiebe)
-	 **/
+	 */
 
 	public function getTemplateHierarchy( $template ) {
 		// whether or not .php was added
@@ -452,6 +466,14 @@ class Tribe_Image_Widget extends WP_Widget {
 		} else {
 			$file = 'views/' . $template;
 		}
+
+		/**
+		 * Allow filtering of currently-retrieved Image Widget template file's path.
+		 *
+		 * @since TBD
+		 *
+		 * @param string $file The retrieved template file's path.
+		 */
 		return apply_filters( 'sp_template_image-widget_' . $template, $file );
 	}
 

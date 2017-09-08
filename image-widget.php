@@ -34,10 +34,10 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 		load_plugin_textdomain( 'image-widget', false, trailingslashit( basename( dirname( __FILE__ ) ) ) . 'lang/' );
-		
+
 		$widget_ops  = array( 'classname' => 'widget_sp_image', 'description' => __( 'Showcase a single image with a Title, URL, and a Description', 'image-widget' ) );
 		$control_ops = array( 'id_base' => 'widget_sp_image' );
-		
+
 		parent::__construct( 'widget_sp_image', __( 'Image Widget', 'image-widget' ), $widget_ops, $control_ops );
 
 		if ( $this->use_old_uploader() ) {
@@ -110,7 +110,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		extract( $args );
 
 		$instance = wp_parse_args( (array) $instance, self::get_defaults() );
-		
+
 		if ( ! empty( $instance['imageurl'] ) || ! empty( $instance['attachment_id'] ) ) {
 
 			$instance['title']       = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'] );
@@ -149,7 +149,7 @@ class Tribe_Image_Widget extends WP_Widget {
 	 * @return object
 	 */
 	public function update( $new_instance, $old_instance ) {
-		
+
 		$instance     = $old_instance;
 		$new_instance = wp_parse_args( (array) $new_instance, self::get_defaults() );
 
@@ -317,7 +317,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			}
 		}
 
-		$instance['width'] =  abs( $instance['width'] );
+		$instance['width']  = abs( $instance['width'] );
 		$instance['height'] = abs( $instance['height'] );
 
 		$attr = array();
@@ -358,10 +358,8 @@ class Tribe_Image_Widget extends WP_Widget {
 		/**
 		 * Allow filtering of the image attributes used on the front-end.
 		 *
-		 * @since TBD
-		 *
 		 * @param array $attr Image attributes to be filtered.
-		 * @param array $instance The current widget instance. 
+		 * @param array $instance The current widget instance.
 		 */
 		$attr = apply_filters( 'image_widget_image_attributes', $attr, $instance );
 
@@ -411,8 +409,6 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		/**
 		 * Allow filtering the image sizes available for use in the Image Widget dropdown
-		 *
-		 * @since TBD
 		 *
 		 * @param array $possible_sizes The array of available sizes.
 		 */
@@ -480,8 +476,6 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		/**
 		 * Allow filtering of currently-retrieved Image Widget template file's path.
-		 *
-		 * @since TBD
 		 *
 		 * @param string $file The retrieved template file's path.
 		 */
@@ -600,9 +594,9 @@ class Tribe_Image_Widget extends WP_Widget {
 
 	/**
 	 * Display an informational section in the plugin admin ui.
+	 *
 	 * @param $meta
 	 * @param $file
-	 *
 	 * @return array
 	 */
 	public function plugin_row_meta( $meta, $file ) {

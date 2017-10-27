@@ -206,6 +206,10 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
+= [4.4.7] TBD =
+
+* Tweak - Added new `image_widget_option_defaults` hook to improve customizability (props @svandragt) | #91225
+
 = [4.4.6] 2017-09-12 =
 
 * New - Added new filter `tribe_image_widget_instance_description` for more control over how the description field is handled.

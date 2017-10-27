@@ -35,6 +35,8 @@ $id_prefix = $this->get_field_id( '' );
 
 	<p><label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Link', 'image-widget' ); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_attr( strip_tags( $instance['link'] ) ); ?>" /><br />
+	<p><label for="<?php echo $this->get_field_id( 'linktitle' ); ?>"><?php _e( 'Link Title', 'image-widget' ); ?>:</label>
+	<input class="widefat" id="<?php echo $this->get_field_id( 'linktitle' ); ?>" name="<?php echo $this->get_field_name( 'linktitle' ); ?>" type="text" value="<?php echo esc_attr( strip_tags( $instance['linktitle'] ) ); ?>" /><br />
 	<label for="<?php echo $this->get_field_id( 'linkid' ); ?>"><?php _e( 'Link ID', 'image-widget' ); ?>:</label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'linkid' ); ?>" name="<?php echo $this->get_field_name( 'linkid' ); ?>" type="text" value="<?php echo esc_attr( strip_tags( $instance['linkid'] ) ); ?>" /><br />
 	<select name="<?php echo $this->get_field_name( 'linktarget' ); ?>" id="<?php echo $this->get_field_id( 'linktarget' ); ?>">

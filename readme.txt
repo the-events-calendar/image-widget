@@ -209,6 +209,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 = [4.4.7] TBD =
 
 * Tweak - Added new `image_widget_option_defaults` hook to improve customizability (props @svandragt) | #91225
+* Feature - Added new Link Title field and filter to improve tooltip (previously used alt text) (thanks @marklcm) [89993]
 
 = [4.4.6] 2017-09-12 =
 

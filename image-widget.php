@@ -250,7 +250,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		/**
 		 * Allow users to customize the default values of various Image Widget options.
 		 *
-		 * @since TBD
+		 * @since 4.4.7
 		 *
 		 * @param array $defaults The array of default option values.
 		 */

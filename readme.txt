@@ -206,7 +206,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
-= [4.4.7] 2017-11-01 =
+= [4.4.7] 2017-11-02 =
 
 * Feature - Added new Link Title field and filter to improve tooltip (previously used alt text) (thanks @marklcm) [89993]
 * Tweak - Added new `image_widget_option_defaults` hook to improve customizability (props @svandragt) [#91225]

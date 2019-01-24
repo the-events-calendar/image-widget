@@ -206,6 +206,10 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
+= [TBD] TBD =
+
+* Tweak - Update plugin header [90398]
+
 = [4.4.7] 2017-11-02 =
 
 * Feature - Added new Link Title field and filter to improve tooltip (previously used alt text) (thanks @marklcm) [89993]

@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Image Widget
-Plugin URI: http://wordpress.org/plugins/image-widget/
-Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong><a href="http://m.tri.be/19my">Image Widget Plus</a> - Multiple images, slider and more.</strong>
-Author: Modern Tribe, Inc.
+Plugin URI: https://wordpress.org/plugins/image-widget/
+Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong><a href="https://evnt.is/19my">Image Widget Plus</a> - Multiple images, slider and more.</strong>
+Author: The Events Calendar
 Version: 4.4.7
-Author URI: http://m.tri.be/iwpdoc
+Author URI: https://evnt.is/1aor
 Text Domain: image-widget
 Domain Path: /lang
 */
@@ -246,7 +246,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		if ( ! defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) {
 			$defaults['size']          = self::CUSTOM_IMAGE_SIZE_SLUG;
 			$defaults['attachment_id'] = 0;
-		}		
+		}
 		/**
 		 * Allow users to customize the default values of various Image Widget options.
 		 *
@@ -495,9 +495,9 @@ class Tribe_Image_Widget extends WP_Widget {
 	 * Display a thank you nag when the plugin has been upgraded.
 	 */
 	public function post_upgrade_nag() {
-		
-		if ( 
-			! current_user_can( 'install_plugins' ) 
+
+		if (
+			! current_user_can( 'install_plugins' )
 			|| class_exists( 'Tribe__Image__Plus__Main' )
 		) {
 			return;
@@ -554,7 +554,7 @@ class Tribe_Image_Widget extends WP_Widget {
 	 * @param string $key
 	 * @return string option key
 	 */
-	private function generate_key( $key ) {		
+	private function generate_key( $key ) {
 		return join( '_', array( self::VERSION_KEY, $key, ) );
 	}
 
@@ -573,8 +573,8 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		$msg = sprintf(
 			__( '<p class="dashicons-before dashicons-format-gallery"><strong>Image Widget Plus</strong> - Add lightbox, slideshow, and random image widgets. <strong><a href="%s" target="_blank">Find out how!</a></strong></p>', 'image-widget' ),
-			'http://m.tri.be/19my',
-			'http://m.tri.be/19my'
+			'https://evnt.is/19my',
+			'https://evnt.is/19my'
 		);
 
 		return "<div class='notice notice-info is-dismissible image-widget-notice' data-key='$key'>$msg</div>";
@@ -595,7 +595,7 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		$msg = sprintf(
 			__( '<p class="dashicons-before dashicons-star-filled"><strong>Image Widget Plus</strong> - Add lightbox, slideshow, and random image widgets. <strong><a href="%s" target="_blank">Find out how!</a></strong></p>', 'image-widget' ),
-			'http://m.tri.be/19mx'
+			'https://evnt.is/19mx'
 		);
 
 		return "<div class='notice notice-info is-dismissible image-widget-notice' data-key='$key'>$msg</div>";
@@ -610,7 +610,7 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	public function plugin_row_meta( $meta, $file ) {
 		if ( $file == plugin_basename( dirname( __FILE__ ) . '/image-widget.php' ) ) {
-			$meta[] = '<strong><a href="http://m.tri.be/19ma" target="_blank">' . esc_html__( 'Image Widget Plus', 'image-widget' ) . '</a></strong>';
+			$meta[] = '<strong><a href="https://evnt.is/19ma" target="_blank">' . esc_html__( 'Image Widget Plus', 'image-widget' ) . '</a></strong>';
 		}
 
 		return $meta;

@@ -573,7 +573,6 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		$msg = sprintf(
 			__( '<p class="dashicons-before dashicons-format-gallery"><strong>Image Widget Plus</strong> - Add lightbox, slideshow, and random image widgets. <strong><a href="%s" target="_blank">Find out how!</a></strong></p>', 'image-widget' ),
-			'https://evnt.is/19my',
 			'https://evnt.is/19my'
 		);
 

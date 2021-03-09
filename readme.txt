@@ -1,9 +1,9 @@
 === Image Widget ===
-Contributors: ModernTribe, aguseo, borkweb, barry.hughes, bordoni, brianjessee, brook-tribe, cliffpaulick, courane01, faction23, GeoffBel, geoffgraham, ggwicz, jbrinley, leahkoerper, lucatume, mastromktg, mat-lipe, MZAWeb, neillmcshea, nicosantos, patriciahillebrandt, peterchester, reid.peifer, roblagatta, ryancurban, shane.pearlman, shelbelliott, tribecari, vicskf, zbtirrell
+Contributors: theeventscalendar, aguseo, borkweb, bordoni, brianjessee, GeoffBel, geoffgraham, leahkoerper, lucatume, neillmcshea, patriciahillebrandt, vicskf, zbtirrell
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
-Tags: widget, image, ad, banner, simple, upload, sidebar, retina, admin, thickbox, resize, arabic, brazilian portuguese, dutch, german, hebrew, italian, japanese, polish, spanish, swedish, widget-only
+Tags: widget, image, ad, banner, sidebar
 Requires at least: 3.5
-Tested up to: 5.2.1
+Tested up to: 5.6
 Stable tag: 4.4.7
 
 A simple image widget that uses the native WordPress media manager to add image widgets to your site.
@@ -13,7 +13,7 @@ A simple image widget that uses the native WordPress media manager to add image 
 Image Widget is a simple plugin that uses the native WordPress media manager to add image widgets to your site.
 
 Need to add slideshows, lightboxes, or random images?
-<strong>Check out [Image Widget Plus](http://m.tri.be/19mc)!</strong>
+<strong>Check out [Image Widget Plus](https://evnt.is/19mc)!</strong>
 
 = Image Widget Features =
 
@@ -25,11 +25,11 @@ Need to add slideshows, lightboxes, or random images?
 * Versatile - all fields are optional
 * Upload, link to external image, or select an image from your media collection
 * Customize the look & feel with filter hooks or theme overrides
-* Additional features available with [Image Widget Plus](http://m.tri.be/19mc)
+* Additional features available with [Image Widget Plus](https://evnt.is/19mc)
 
 = Quality You Can Trust =
 
-Image Widget is developed and maintained by [Modern Tribe](http://m.tri.be/19md), the same folks behind [The Events Calendar, Event Tickets, and a full suite of premium plugins](http://m.tri.be/19me).
+Image Widget is developed and maintained by [The Events Calendar](https://evnt.is/1aor), the same folks behind [The Events Calendar, Event Tickets, and a full suite of premium plugins](https://evnt.is/19me).
 
 This plugin is actively supported by our team and contributions from community members. If you see a question in the forum you can help with or have a great idea and want to code it up or submit a patch, that would be awesome! Not only will we shower you with praise and thanks, it’s also a good way to get to know us and lead into options for paid work if you freelance.
 
@@ -42,11 +42,11 @@ Image Widget Plus features include:
 * Slideshow
 * Lightbox
 
-[Check out Image Widget Plus now!](http://m.tri.be/19mg)
+[Check out Image Widget Plus now!](https://evnt.is/19mg)
 
 = Pull Requests & Translations =
 
-[Check us out on GitHub](https://github.com/moderntribe/image-widget) to pull request changes.
+[Check us out on GitHub](https://github.com/the-events-calendar/image-widget) to pull request changes.
 
 Translations can be submitted [here on WordPress.org](https://translate.wordpress.org/projects/wp-plugins/image-widget).
 
@@ -92,7 +92,7 @@ Though we do not have a demo available, we do have [screenshots available here](
 
 = How can I add lightbox, slider, or random image capabilities?  =
 
-These features are part of our Image Widget Plus plugin. You can learn more about [Image Widget Plus](http://m.tri.be/19mh) on our website.
+These features are part of our Image Widget Plus plugin. You can learn more about [Image Widget Plus](https://evnt.is/19mh) on our website.
 
 = Where do I go to file a bug or ask a question? =
 
@@ -214,7 +214,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 = [4.4.6] 2017-09-12 =
 
 * New - Added new filter `tribe_image_widget_instance_description` for more control over how the description field is handled.
-* Fix - Prevent broken HTML in the "description" field that sometimes arose with certain user roles. Props to users @bridgetashley and @JoshRoy spotting this one! 
+* Fix - Prevent broken HTML in the "description" field that sometimes arose with certain user roles. Props to users @bridgetashley and @JoshRoy spotting this one!
 
 = [4.4.5] 2017-06-14 =
 

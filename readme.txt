@@ -3,8 +3,8 @@ Contributors: theeventscalendar, aguseo, borkweb, bordoni, brianjessee, GeoffBel
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
 Tags: widget, image, ad, banner, sidebar
 Requires at least: 3.5
-Tested up to: 5.6
-Stable tag: 4.4.7
+Tested up to: 5.9.3
+Stable tag: 4.4.8
 
 A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 
@@ -205,6 +205,10 @@ define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
 For more info on the philosophy here, check out our [blog post](http://tri.be/define-i-have-donated-true/)
 
 == Changelog ==
+
+= [4.4.8] 2022-05-06 =
+
+* Tweak - Updating WordPress compatibility.
 
 = [4.4.7] 2017-11-02 =
 

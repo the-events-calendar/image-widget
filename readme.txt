@@ -1,19 +1,16 @@
 === Image Widget ===
-Contributors: theeventscalendar, aguseo, borkweb, bordoni, brianjessee, GeoffBel, geoffgraham, leahkoerper, lucatume, neillmcshea, patriciahillebrandt, vicskf, zbtirrell
+Contributors: theeventscalendar, aguseo, borkweb, bordoni, brianjessee, GeoffBel, leahkoerper, lucatume, neillmcshea, vicskf, zbtirrell
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
 Tags: widget, image, ad, banner, sidebar
 Requires at least: 3.5
-Tested up to: 5.9.3
-Stable tag: 4.4.8
+Tested up to: 6.2.2
+Stable tag: 4.4.9
 
 A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 
 == Description ==
 
 Image Widget is a simple plugin that uses the native WordPress media manager to add image widgets to your site.
-
-Need to add slideshows, lightboxes, or random images?
-<strong>Check out [Image Widget Plus](https://evnt.is/19mc)!</strong>
 
 = Image Widget Features =
 
@@ -32,17 +29,6 @@ Need to add slideshows, lightboxes, or random images?
 Image Widget is developed and maintained by [The Events Calendar](https://evnt.is/1aor), the same folks behind [The Events Calendar, Event Tickets, and a full suite of premium plugins](https://evnt.is/19me).
 
 This plugin is actively supported by our team and contributions from community members. If you see a question in the forum you can help with or have a great idea and want to code it up or submit a patch, that would be awesome! Not only will we shower you with praise and thanks, it’s also a good way to get to know us and lead into options for paid work if you freelance.
-
-= Image Widget Plus! =
-
-Image Widget Plus features include:
-
-* Multiple image support
-* Random image
-* Slideshow
-* Lightbox
-
-[Check out Image Widget Plus now!](https://evnt.is/19mg)
 
 = Pull Requests & Translations =
 
@@ -205,6 +191,11 @@ define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
 For more info on the philosophy here, check out our [blog post](http://tri.be/define-i-have-donated-true/)
 
 == Changelog ==
+
+= [4.4.9] 2022-05-06 =
+
+* Tweak - Updating WordPress compatibility, tested up to 6.6.2.
+* Tweak - Remove references to Image Widget Plus and Notices.
 
 = [4.4.8] 2022-05-06 =
 

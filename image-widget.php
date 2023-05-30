@@ -2,9 +2,9 @@
 /*
 Plugin Name: Image Widget
 Plugin URI: https://wordpress.org/plugins/image-widget/
-Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong><a href="https://evnt.is/19my">Image Widget Plus</a> - Multiple images, slider and more.</strong>
+Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 Author: The Events Calendar
-Version: 4.4.8
+Version: 4.4.9
 Author URI: https://evnt.is/1aor
 Text Domain: image-widget
 Domain Path: /lang
@@ -23,7 +23,7 @@ add_action( 'widgets_init', 'tribe_load_image_widget' );
 
 class Tribe_Image_Widget extends WP_Widget {
 
-	const VERSION = '4.4.8';
+	const VERSION = '4.4.9';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
 
@@ -49,14 +49,6 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		// fire admin_setup if we are in the customizer
 		add_action( 'admin_enqueue_scripts', array( $this, 'maybe_admin_setup' ) );
-
-		add_action( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
-
-		if ( ! defined( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET' ) )
-			add_action( 'admin_notices', array( $this, 'post_upgrade_nag' ) );
-
-		add_action( 'network_admin_notices', array( $this, 'post_upgrade_nag' ) );
-		add_action( 'wp_ajax_dismissed_image_widget_notice_handler', array( $this, 'ajax_notice_handler' ) );
 	}
 
 	/**
@@ -489,129 +481,5 @@ class Tribe_Image_Widget extends WP_Widget {
 		 * @param string $file The retrieved template file's path.
 		 */
 		return apply_filters( 'sp_template_image-widget_' . $template, $file );
-	}
-
-	/**
-	 * Display a thank you nag when the plugin has been upgraded.
-	 */
-	public function post_upgrade_nag() {
-
-		if (
-			! current_user_can( 'install_plugins' )
-			|| class_exists( 'Tribe__Image__Plus__Main' )
-		) {
-			return;
-		}
-
-		global $pagenow;
-		$msg = false;
-		switch ( $pagenow ) {
-			case 'plugins.php' :
-				$msg = $this->upgrade_nag_plugins_admin_msg();
-				break;
-			case 'widgets.php' :
-				$msg = $this->upgrade_nag_widget_admin_msg();
-				break;
-		}
-
-		if ( ! $msg ) return;
-
-		echo $msg;
-		?><script>
-			jQuery(document).ready(function($){
-				// Dismiss our admin notice
-				$( document ).on( 'click', '.image-widget-notice .notice-dismiss', function () {
-					var key = $( this ).closest( '.image-widget-notice' ).data( 'key' );
-					$.ajax( ajaxurl,
-						{
-							type: 'POST',
-							data: {
-								action: 'dismissed_image_widget_notice_handler',
-								key: key
-							}
-						} );
-				} );
-			} );
-		</script><?php
-	}
-
-	/**
-	 * AJAX handler to store the state of dismissible notices.
-	 */
-	public function ajax_notice_handler() {
-		if ( empty( $_POST['key'] ) ) {
-			return;
-		}
-
-		$key = $this->generate_key( sanitize_text_field( $_POST['key'] ) );
-
-		update_site_option( $key, self::VERSION );
-	}
-
-	/**
-	 * Generate version key for admin notice options
-	 *
-	 * @param string $key
-	 * @return string option key
-	 */
-	private function generate_key( $key ) {
-		return join( '_', array( self::VERSION_KEY, $key, ) );
-	}
-
-	/**
-	 * Upgrade nag: Plugins Admin
-	 *
-	 * @return string alert message.
-	 */
-	private function upgrade_nag_plugins_admin_msg() {
-		$key        = 'plugin';
-		$option_key = $this->generate_key( $key );
-
-		if ( get_site_option( $option_key ) == self::VERSION ) {
-			return;
-		}
-
-		$msg = sprintf(
-			__( '<p class="dashicons-before dashicons-format-gallery"><strong>Image Widget Plus</strong> - Add lightbox, slideshow, and random image widgets. <strong><a href="%s" target="_blank">Find out how!</a></strong></p>', 'image-widget' ),
-			'https://evnt.is/19my'
-		);
-
-		return "<div class='notice notice-info is-dismissible image-widget-notice' data-key='$key'>$msg</div>";
-	}
-
-	/**
-	 * Upgrade nag: Widget Admin
-	 *
-	 * @return string alert message.
-	 */
-	private function upgrade_nag_widget_admin_msg() {
-		$key        = 'widget';
-		$option_key = $this->generate_key( $key );
-
-		if ( get_site_option( $option_key ) == self::VERSION ) {
-			return;
-		}
-
-		$msg = sprintf(
-			__( '<p class="dashicons-before dashicons-star-filled"><strong>Image Widget Plus</strong> - Add lightbox, slideshow, and random image widgets. <strong><a href="%s" target="_blank">Find out how!</a></strong></p>', 'image-widget' ),
-			'https://evnt.is/19mx'
-		);
-
-		return "<div class='notice notice-info is-dismissible image-widget-notice' data-key='$key'>$msg</div>";
-	}
-
-	/**
-	 * Display an informational section in the plugin admin ui.
-	 *
-	 * @param $meta
-	 * @param $file
-	 * @return array
-	 */
-	public function plugin_row_meta( $meta, $file ) {
-		if ( $file == plugin_basename( dirname( __FILE__ ) . '/image-widget.php' ) ) {
-			$meta[] = '<strong><a href="https://evnt.is/19ma" target="_blank">' . esc_html__( 'Image Widget Plus', 'image-widget' ) . '</a></strong>';
-		}
-
-		return $meta;
 	}
 }

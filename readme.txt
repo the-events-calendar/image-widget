@@ -22,7 +22,6 @@ Image Widget is a simple plugin that uses the native WordPress media manager to 
 * Versatile - all fields are optional
 * Upload, link to external image, or select an image from your media collection
 * Customize the look & feel with filter hooks or theme overrides
-* Additional features available with [Image Widget Plus](https://evnt.is/19mc)
 
 = Quality You Can Trust =
 

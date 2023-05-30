@@ -4,7 +4,7 @@ Plugin Name: Image Widget
 Plugin URI: https://wordpress.org/plugins/image-widget/
 Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong><a href="https://evnt.is/19my">Image Widget Plus</a> - Multiple images, slider and more.</strong>
 Author: The Events Calendar
-Version: 4.4.8
+Version: 4.4.9
 Author URI: https://evnt.is/1aor
 Text Domain: image-widget
 Domain Path: /lang
@@ -23,7 +23,7 @@ add_action( 'widgets_init', 'tribe_load_image_widget' );
 
 class Tribe_Image_Widget extends WP_Widget {
 
-	const VERSION = '4.4.8';
+	const VERSION = '4.4.9';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
 

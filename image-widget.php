@@ -2,7 +2,7 @@
 /*
 Plugin Name: Image Widget
 Plugin URI: https://wordpress.org/plugins/image-widget/
-Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site. <strong><a href="https://evnt.is/19my">Image Widget Plus</a> - Multiple images, slider and more.</strong>
+Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 Author: The Events Calendar
 Version: 4.4.9
 Author URI: https://evnt.is/1aor

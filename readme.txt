@@ -209,6 +209,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 = [4.4.9] 2022-05-06 =
 
 * Tweak - Updating WordPress compatibility, tested up to 6.6.2.
+* Tweak - Remove references to Image Widget Plus and Notices.
 
 = [4.4.8] 2022-05-06 =
 

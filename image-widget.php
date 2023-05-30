@@ -4,7 +4,7 @@ Plugin Name: Image Widget
 Plugin URI: https://wordpress.org/plugins/image-widget/
 Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 Author: The Events Calendar
-Version: 4.4.9
+Version: 4.4.10
 Author URI: https://evnt.is/1aor
 Text Domain: image-widget
 Domain Path: /lang
@@ -23,7 +23,7 @@ add_action( 'widgets_init', 'tribe_load_image_widget' );
 
 class Tribe_Image_Widget extends WP_Widget {
 
-	const VERSION = '4.4.9';
+	const VERSION = '4.4.10';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
 
@@ -105,26 +105,191 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		if ( ! empty( $instance['imageurl'] ) || ! empty( $instance['attachment_id'] ) ) {
 
-			$instance['title']       = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'] );
-			$instance['description'] = apply_filters( 'widget_text', $instance['description'], $args, $instance );
-			$instance['link']        = apply_filters( 'image_widget_image_link', esc_url( $instance['link'] ), $args, $instance );
-			$instance['linkid']      = apply_filters( 'image_widget_image_link_id', esc_attr( $instance['linkid'] ), $args, $instance );
-			$instance['linktitle']   = apply_filters( 'image_widget_image_link_title', esc_attr( $instance['linktitle'] ), $args, $instance );
-			$instance['linktarget']  = apply_filters( 'image_widget_image_link_target', esc_attr( $instance['linktarget'] ), $args, $instance );
-			$instance['width']       = apply_filters( 'image_widget_image_width', abs( $instance['width'] ), $args, $instance );
-			$instance['height']      = apply_filters( 'image_widget_image_height', abs( $instance['height'] ), $args, $instance );
-			$instance['maxwidth']    = apply_filters( 'image_widget_image_maxwidth', esc_attr( $instance['maxwidth'] ), $args, $instance );
-			$instance['maxheight']   = apply_filters( 'image_widget_image_maxheight', esc_attr( $instance['maxheight'] ), $args, $instance );
-			$instance['align']       = apply_filters( 'image_widget_image_align', esc_attr( $instance['align'] ), $args, $instance );
-			$instance['alt']         = apply_filters( 'image_widget_image_alt', esc_attr( $instance['alt'] ), $args, $instance );
-			$instance['rel']         = apply_filters( 'image_widget_image_rel', esc_attr( $instance['rel'] ), $args, $instance );
+			/**
+			 * Filters the title of the widget.
+			 *
+			 * @link https://developer.wordpress.org/reference/hooks/widget_title/
+			 *
+			 * @param string $title    The widget title.
+			 * @param array  $instance The array of widget options.
+			 * @param mixed  $id_base  The widget ID.
+			 */
+			$instance['title'] = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
+			/**
+			 * Filters the text of the widget.
+			 *
+			 * @link https://developer.wordpress.org/reference/hooks/widget_text/
+			 *
+			 * @param string $description The widget description.
+			 * @param array  $args        The array of widget arguments.
+			 * @param array  $instance    The array of widget options.
+			 */
+			$instance['description'] = apply_filters( 'widget_text', $instance['description'], $args, $instance );
+
+			/**
+			 * Filters the link of the image widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $link     The widget image link.
+			 * @param array  $args     The array of widget arguments.
+			 * @param array  $instance The array of widget options.
+			 */
+			$instance['link'] = apply_filters( 'image_widget_image_link', esc_url( $instance['link'] ), $args, $instance );
+
+			/**
+			 * Filters the link id of the image widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $linkid   The widget image link ID.
+			 * @param array  $args     The array of widget arguments.
+			 * @param array  $instance The array of widget options.
+			 */
+			$instance['linkid'] = apply_filters( 'image_widget_image_link_id', esc_attr( $instance['linkid'] ), $args, $instance );
+
+			/**
+			 * Filters the link title of the image widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $linktitle The widget image link title.
+			 * @param array  $args      The array of widget arguments.
+			 * @param array  $instance  The array of widget options.
+			 */
+			$instance['linktitle'] = apply_filters( 'image_widget_image_link_title', esc_attr( $instance['linktitle'] ), $args, $instance );
+
+			/**
+			 * Filters the link target of the image widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $linktarget The widget image link target.
+			 * @param array  $args       The array of widget arguments.
+			 * @param array  $instance   The array of widget options.
+			 */
+			$instance['linktarget'] = apply_filters( 'image_widget_image_link_target', esc_attr( $instance['linktarget'] ), $args, $instance );
+
+			/**
+			 * Filters the width of the image in the widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $width    The width of the widget image.
+			 * @param array  $args     The array of widget arguments.
+			 * @param array  $instance The array of widget options.
+			 */
+			$instance['width'] = apply_filters( 'image_widget_image_width', abs( $instance['width'] ), $args, $instance );
+
+			/**
+			 * Filters the height of the image in the widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $height   The height of the widget image.
+			 * @param array  $args     The array of widget arguments.
+			 * @param array  $instance The array of widget options.
+			 */
+			$instance['height'] = apply_filters( 'image_widget_image_height', abs( $instance['height'] ), $args, $instance );
+
+			/**
+			 * Filters the max width of the image in the widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $maxwidth The max width of the widget image.
+			 * @param array  $args     The array of widget arguments.
+			 * @param array  $instance The array of widget options.
+			 */
+			$instance['maxwidth'] = apply_filters( 'image_widget_image_maxwidth', esc_attr( $instance['maxwidth'] ), $args, $instance );
+
+			/**
+			 * Filters the max height of the image in the widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $maxheight The max height of the widget image.
+			 * @param array  $args      The array of widget arguments.
+			 * @param array  $instance  The array of widget options.
+			 */
+			$instance['maxheight'] = apply_filters( 'image_widget_image_maxheight', esc_attr( $instance['maxheight'] ), $args, $instance );
+
+			/**
+			 * Filters the alignment of the image in the widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $align    The alignment of the widget image.
+			 * @param array  $args     The array of widget arguments.
+			 * @param array  $instance The array of widget options.
+			 */
+			$instance['align'] = apply_filters( 'image_widget_image_align', esc_attr( $instance['align'] ), $args, $instance );
+
+			/**
+			 * Filters the alt text of the image in the widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $alt      The alt text of the widget image.
+			 * @param array  $args     The array of widget arguments.
+			 * @param array  $instance The array of widget options.
+			 */
+			$instance['alt'] = apply_filters( 'image_widget_image_alt', esc_attr( $instance['alt'] ), $args, $instance );
+
+			/**
+			 * Filters the rel attribute of the image in the widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $rel      The rel attribute of the widget image.
+			 * @param array  $args     The array of widget arguments.
+			 * @param array  $instance The array of widget options.
+			 */
+			$instance['rel'] = apply_filters( 'image_widget_image_rel', esc_attr( $instance['rel'] ), $args, $instance );
+
+			/**
+			 * Checks if the IMAGE_WIDGET_COMPATIBILITY_TEST constant is defined.
+			 */
 			if ( ! defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) {
-				$instance['attachment_id'] = ( $instance['attachment_id'] > 0 ) ? $instance['attachment_id'] : $instance['image'];
-				$instance['attachment_id'] = apply_filters( 'image_widget_image_attachment_id', abs( $instance['attachment_id'] ), $args, $instance );
-				$instance['size']          = apply_filters( 'image_widget_image_size', esc_attr( $instance['size'] ), $args, $instance );
+
+			    /**
+			     * Assigns the attachment_id field in the instance array a value based on condition.
+			     */
+			    $instance['attachment_id'] = ( $instance['attachment_id'] > 0 ) ? $instance['attachment_id'] : $instance['image'];
+
+			    /**
+			     * Filters the attachment ID of the image in the widget.
+			     *
+			     * @since 4.0.0
+			     *
+			     * @param int   $attachment_id The attachment ID of the widget image.
+			     * @param array $args          The array of widget arguments.
+			     * @param array $instance      The array of widget options.
+			     */
+			    $instance['attachment_id'] = apply_filters( 'image_widget_image_attachment_id', abs( $instance['attachment_id'] ), $args, $instance );
+
+			    /**
+			     * Filters the size of the image in the widget.
+			     *
+			     * @since 4.0.0
+			     *
+			     * @param string $size     The size of the widget image.
+			     * @param array  $args     The array of widget arguments.
+			     * @param array  $instance The array of widget options.
+			     */
+			    $instance['size'] = apply_filters( 'image_widget_image_size', esc_attr( $instance['size'] ), $args, $instance );
 			}
 
+			/**
+			 * Filters the URL of the image in the widget.
+			 *
+			 * @since 4.0.0
+			 *
+			 * @param string $imageurl The URL of the widget image.
+			 * @param array  $args     The array of widget arguments.
+			 * @param array  $instance The array of widget options.
+			 */
 			$instance['imageurl'] = apply_filters( 'image_widget_image_url', esc_url( $instance['imageurl'] ), $args, $instance );
 
 			// No longer using extracted vars. This is here for backwards compatibility.

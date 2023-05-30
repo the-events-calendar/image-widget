@@ -12,9 +12,6 @@ A simple image widget that uses the native WordPress media manager to add image 
 
 Image Widget is a simple plugin that uses the native WordPress media manager to add image widgets to your site.
 
-Need to add slideshows, lightboxes, or random images?
-<strong>Check out [Image Widget Plus](https://evnt.is/19mc)!</strong>
-
 = Image Widget Features =
 
 * Responsive
@@ -32,17 +29,6 @@ Need to add slideshows, lightboxes, or random images?
 Image Widget is developed and maintained by [The Events Calendar](https://evnt.is/1aor), the same folks behind [The Events Calendar, Event Tickets, and a full suite of premium plugins](https://evnt.is/19me).
 
 This plugin is actively supported by our team and contributions from community members. If you see a question in the forum you can help with or have a great idea and want to code it up or submit a patch, that would be awesome! Not only will we shower you with praise and thanks, it’s also a good way to get to know us and lead into options for paid work if you freelance.
-
-= Image Widget Plus! =
-
-Image Widget Plus features include:
-
-* Multiple image support
-* Random image
-* Slideshow
-* Lightbox
-
-[Check out Image Widget Plus now!](https://evnt.is/19mg)
 
 = Pull Requests & Translations =
 

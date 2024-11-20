@@ -15,7 +15,7 @@ $id_prefix = $this->get_field_id( '' );
 		<?php echo $this->get_image_html( $instance, false ); ?>
 	</div>
 	<input type="hidden" id="<?php echo $this->get_field_id( 'attachment_id' ); ?>" name="<?php echo $this->get_field_name( 'attachment_id' ); ?>" value="<?php echo abs( $instance['attachment_id'] ); ?>" />
-	<input type="hidden" id="<?php echo $this->get_field_id( 'imageurl' ); ?>" name="<?php echo $this->get_field_name( 'imageurl' ); ?>" value="<?php echo $instance['imageurl']; ?>" />
+	<input type="hidden" id="<?php echo $this->get_field_id( 'imageurl' ); ?>" name="<?php echo $this->get_field_name( 'imageurl' ); ?>" value="<?php echo esc_attr( esc_url( $instance['imageurl'] ) ); ?>" />
 </div>
 <br clear="all" />
 

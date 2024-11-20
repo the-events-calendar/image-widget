@@ -4,7 +4,7 @@ Plugin Name: Image Widget
 Plugin URI: https://wordpress.org/plugins/image-widget/
 Description: A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 Author: The Events Calendar
-Version: 4.4.10
+Version: 4.4.11
 Author URI: https://evnt.is/1aor
 Text Domain: image-widget
 Domain Path: /lang
@@ -23,7 +23,7 @@ add_action( 'widgets_init', 'tribe_load_image_widget' );
 
 class Tribe_Image_Widget extends WP_Widget {
 
-	const VERSION = '4.4.10';
+	const VERSION = '4.4.11';
 
 	const CUSTOM_IMAGE_SIZE_SLUG = 'tribe_image_widget_custom';
 
@@ -532,7 +532,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		// If there is an imageurl, use it to render the image. Eventually we should kill this and simply rely on attachment_ids.
 		if ( ! empty( $instance['imageurl'] ) ) {
 			// If all we have is an image src url we can still render an image.
-			$attr['src'] = $instance['imageurl'];
+			$attr['src'] = esc_url( $instance['imageurl'] );
 			$attr        = array_map( 'esc_attr', $attr );
 			$hwstring    = image_hwstring( $instance['width'], $instance['height'] );
 

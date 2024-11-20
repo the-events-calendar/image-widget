@@ -1,10 +1,10 @@
 === Image Widget ===
-Contributors: theeventscalendar, aguseo, borkweb, bordoni, brianjessee, GeoffBel, leahkoerper, lucatume, neillmcshea, vicskf, zbtirrell
+Contributors: theeventscalendar, aguseo, borkweb, bordoni, brianjessee, leahkoerper, lucatume, neillmcshea, vicskf, zbtirrell
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4BSPTNFFY6AL6
 Tags: widget, image, ad, banner, sidebar
 Requires at least: 3.5
-Tested up to: 6.2.2
-Stable tag: 4.4.10
+Tested up to: 6.7.1
+Stable tag: 4.4.11
 
 A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 
@@ -198,6 +198,10 @@ define( 'I_HAVE_SUPPORTED_THE_IMAGE_WIDGET', true );
 For more info on the philosophy here, check out our [blog post](http://tri.be/define-i-have-donated-true/)
 
 == Changelog ==
+
+= [4.4.11] 2024-11-20 =
+
+* Security - Prevent old Image URL from being misused for XSS attacks.
 
 = [4.4.10] 2022-06-05 =
 

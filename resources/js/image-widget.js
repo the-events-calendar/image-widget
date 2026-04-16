@@ -70,13 +70,20 @@ jQuery(document).ready(function($){
 			}
 		},
 
+		// Escape a string for safe use inside an HTML attribute.
+		escAttr : function( str ) {
+			var div = document.createElement( 'div' );
+			div.appendChild( document.createTextNode( str ) );
+			return div.innerHTML.replace( /"/g, '&quot;' ).replace( /'/g, '&#039;' );
+		},
+
 		// Render html for the image.
 		imgHTML : function( attachment ) {
-			var img_html = '<img src="' + attachment.url + '" ';
-			img_html += 'width="' + attachment.width + '" ';
-			img_html += 'height="' + attachment.height + '" ';
+			var img_html = '<img src="' + imageWidget.escAttr( attachment.url ) + '" ';
+			img_html += 'width="' + imageWidget.escAttr( String( attachment.width ) ) + '" ';
+			img_html += 'height="' + imageWidget.escAttr( String( attachment.height ) ) + '" ';
 			if ( attachment.alt != '' ) {
-				img_html += 'alt="' + attachment.alt + '" ';
+				img_html += 'alt="' + imageWidget.escAttr( attachment.alt ) + '" ';
 			}
 			img_html += '/>';
 			return img_html;

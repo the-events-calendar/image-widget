@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: widget, image, ad, banner, sidebar
 Requires at least: 3.5
 Tested up to: 6.7.1
-Stable tag: 4.4.11
+Stable tag: 4.4.12
 
 A simple image widget that uses the native WordPress media manager to add image widgets to your site.
 
@@ -199,16 +199,20 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
+= [4.4.12] 2026-04-20 =
+
+* Security - Add escaping to image attributes.
+
 = [4.4.11] 2024-11-20 =
 
 * Security - Prevent old Image URL from being misused for XSS attacks.
 
-= [4.4.10] 2022-06-05 =
+= [4.4.10] 2023-05-30 =
 
 * Fix - Prevent weird bugs around `widget_title` not having all the expected arguments.
 * Tweak - Add documentation for a few filters.
 
-= [4.4.9] 2023-05-30 =
+= [4.4.9] 2022-06-05 =
 
 * Tweak - Updating WordPress compatibility, tested up to 6.6.2.
 * Tweak - Remove references to Image Widget Plus and Notices.
@@ -558,4 +562,3 @@ Please be advised that this is a significant upgrade. You should definitely back
 Also, several languages will no longer be supported until new translations are submitted. Currently, we have support for Italian, Dutch, and Swedish. If you would like to contribute your own language files, please post links here:
 
 http://wordpress.org/support/topic/image-widget-40-translations-needed-2
-

@@ -199,7 +199,7 @@ For more info on the philosophy here, check out our [blog post](http://tri.be/de
 
 == Changelog ==
 
-= [4.4.12] 2026-04-16 =
+= [4.4.12] 2026-04-20 =
 
 * Security - Add escaping to image attributes.
 

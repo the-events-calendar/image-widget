@@ -180,7 +180,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			 * @param array  $args     The array of widget arguments.
 			 * @param array  $instance The array of widget options.
 			 */
-			$instance['width'] = apply_filters( 'image_widget_image_width', abs( $instance['width'] ), $args, $instance );
+			$instance['width'] = apply_filters( 'image_widget_image_width', abs( (int) $instance['width'] ), $args, $instance );
 
 			/**
 			 * Filters the height of the image in the widget.
@@ -191,7 +191,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			 * @param array  $args     The array of widget arguments.
 			 * @param array  $instance The array of widget options.
 			 */
-			$instance['height'] = apply_filters( 'image_widget_image_height', abs( $instance['height'] ), $args, $instance );
+			$instance['height'] = apply_filters( 'image_widget_image_height', abs( (int) $instance['height'] ), $args, $instance );
 
 			/**
 			 * Filters the max width of the image in the widget.
@@ -267,7 +267,7 @@ class Tribe_Image_Widget extends WP_Widget {
 			     * @param array $args          The array of widget arguments.
 			     * @param array $instance      The array of widget options.
 			     */
-			    $instance['attachment_id'] = apply_filters( 'image_widget_image_attachment_id', abs( $instance['attachment_id'] ), $args, $instance );
+			    $instance['attachment_id'] = apply_filters( 'image_widget_image_attachment_id', abs( (int) $instance['attachment_id'] ), $args, $instance );
 
 			    /**
 			     * Filters the size of the image in the widget.
@@ -334,8 +334,8 @@ class Tribe_Image_Widget extends WP_Widget {
 		$instance['linktitle']  = $new_instance['linktitle'];
 		$instance['linkid']     = $new_instance['linkid'];
 		$instance['linktarget'] = $new_instance['linktarget'];
-		$instance['width']      = abs( $new_instance['width'] );
-		$instance['height']     = abs( $new_instance['height'] );
+		$instance['width']      = abs( (int) $new_instance['width'] );
+		$instance['height']     = abs( (int) $new_instance['height'] );
 
 		if ( ! defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) ) {
 			$instance['size'] = $new_instance['size'];
@@ -347,9 +347,9 @@ class Tribe_Image_Widget extends WP_Widget {
 
 		// Reverse compatibility with $image, now called $attachement_id
 		if ( ! defined( 'IMAGE_WIDGET_COMPATIBILITY_TEST' ) && $new_instance['attachment_id'] > 0 ) {
-			$instance['attachment_id'] = abs( $new_instance['attachment_id'] );
+			$instance['attachment_id'] = abs( (int) $new_instance['attachment_id'] );
 		} elseif ( $new_instance['image'] > 0 ) {
-			$instance['attachment_id'] = $instance['image'] = abs( $new_instance['image'] );
+			$instance['attachment_id'] = $instance['image'] = abs( (int) $new_instance['image'] );
 			if ( class_exists( 'ImageWidgetDeprecated' ) ) {
 				$instance['imageurl'] = ImageWidgetDeprecated::get_image_url( $instance['image'], $instance['width'], $instance['height'] );  // image resizing not working right now
 			}
@@ -483,8 +483,8 @@ class Tribe_Image_Widget extends WP_Widget {
 			}
 		}
 
-		$instance['width']  = abs( $instance['width'] );
-		$instance['height'] = abs( $instance['height'] );
+		$instance['width']  = abs( (int) $instance['width'] );
+		$instance['height'] = abs( (int) $instance['height'] );
 
 		$attr = array();
 
@@ -544,7 +544,7 @@ class Tribe_Image_Widget extends WP_Widget {
 
 			$output .= ' />';
 
-		} elseif ( abs( $instance['attachment_id'] ) > 0 ) {
+		} elseif ( abs( (int) $instance['attachment_id'] ) > 0 ) {
 			$output .= wp_get_attachment_image( $instance['attachment_id'], $size, false, $attr );
 		}
 
@@ -591,7 +591,7 @@ class Tribe_Image_Widget extends WP_Widget {
 		if ( ! empty( $instance['size'] ) && $instance['size'] != self::CUSTOM_IMAGE_SIZE_SLUG ) {
 			$size = $instance['size'];
 		} elseif ( isset( $instance['width'] ) && is_numeric( $instance['width'] ) && isset( $instance['height'] ) && is_numeric( $instance['height'] ) ) {
-			//$size = array(abs($instance['width']),abs($instance['height']));
+			//$size = array(abs((int) $instance['width']),abs((int) $instance['height']));
 			$size = array( $instance['width'], $instance['height'] );
 		} else {
 			$size = 'full';
@@ -608,7 +608,7 @@ class Tribe_Image_Widget extends WP_Widget {
 	 */
 	private function get_image_aspect_ratio( $instance ) {
 		if ( ! empty( $instance['aspect_ratio'] ) ) {
-			return abs( $instance['aspect_ratio'] );
+			return abs( (float) $instance['aspect_ratio'] );
 		} else {
 			$attachment_id = ( ! empty( $instance['attachment_id'] ) ) ? $instance['attachment_id'] : $instance['image'];
 			if ( ! empty( $attachment_id ) ) {
